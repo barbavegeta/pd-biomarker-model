@@ -1,0 +1,1607 @@
+{
+    "$defs": {
+        "Analyte": {
+            "additionalProperties": false,
+            "description": "The molecular entity a measurement quantifies, identified by its UniProtKB accession so that values from different platforms can be linked to the same protein.",
+            "properties": {
+                "gene_symbol": {
+                    "description": "HGNC-approved symbol of the gene encoding the analyte.",
+                    "pattern": "^[A-Z][A-Z0-9-]*$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "hgnc_id": {
+                    "description": "HGNC identifier of the gene encoding the analyte.",
+                    "pattern": "^HGNC:[0-9]+$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^UniProtKB:([OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2})$",
+                    "type": "string"
+                },
+                "label": {
+                    "description": "Human-readable name of the record.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "label",
+                "id"
+            ],
+            "title": "Analyte",
+            "type": "object"
+        },
+        "Assay": {
+            "additionalProperties": false,
+            "description": "A measurement procedure, defined by its technology and platform.",
+            "properties": {
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "label": {
+                    "description": "Human-readable name of the record.",
+                    "type": "string"
+                },
+                "platform": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/PlatformEnum"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Commercial platform and panel version, where one applies."
+                },
+                "technology": {
+                    "$ref": "#/$defs/AssayTechnologyEnum",
+                    "description": "Assay technology, as an OBI or NCIT term."
+                }
+            },
+            "required": [
+                "label",
+                "technology",
+                "id"
+            ],
+            "title": "Assay",
+            "type": "object"
+        },
+        "AssayTechnologyEnum": {
+            "description": "Assay technology.",
+            "enum": [
+                "ELISA",
+                "SIMOA",
+                "SOMASCAN",
+                "OLINK",
+                "SEED_AMPLIFICATION_ASSAY",
+                "SPECT"
+            ],
+            "title": "AssayTechnologyEnum",
+            "type": "string"
+        },
+        "BiomarkerMeasurement": {
+            "additionalProperties": false,
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "measurement_type": {
+                                "const": "RATIO"
+                            }
+                        },
+                        "required": [
+                            "measurement_type"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "unit": {
+                                "const": "1"
+                            }
+                        },
+                        "required": [
+                            "unit"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "measurement_type": {
+                                "const": "CONCENTRATION"
+                            }
+                        },
+                        "required": [
+                            "measurement_type"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "unit": {
+                                "enum": [
+                                    "pg/mL",
+                                    "ng/mL"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "unit"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "measurement_type": {
+                                "const": "RELATIVE_ABUNDANCE"
+                            }
+                        },
+                        "required": [
+                            "measurement_type"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "unit": {
+                                "enum": [
+                                    "{RFU}",
+                                    "{NPX}"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "unit"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "measurement_type": {
+                                "enum": [
+                                    "CONCENTRATION",
+                                    "RELATIVE_ABUNDANCE",
+                                    "RATIO"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "measurement_type"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "unit": {},
+                            "value": {}
+                        },
+                        "required": [
+                            "value",
+                            "unit"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "measurement_type": {
+                                "const": "CATEGORICAL"
+                            }
+                        },
+                        "required": [
+                            "measurement_type"
+                        ]
+                    },
+                    "then": {
+                        "not": {
+                            "required": [
+                                "value"
+                            ]
+                        },
+                        "properties": {
+                            "categorical_result": {},
+                            "value": {}
+                        },
+                        "required": [
+                            "categorical_result"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "measurement_type": {
+                                "const": "CATEGORICAL"
+                            }
+                        },
+                        "required": [
+                            "measurement_type"
+                        ]
+                    },
+                    "then": {
+                        "not": {
+                            "required": [
+                                "unit"
+                            ]
+                        },
+                        "properties": {
+                            "unit": {}
+                        }
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "modality": {
+                                "const": "IMAGING"
+                            }
+                        },
+                        "required": [
+                            "modality"
+                        ]
+                    },
+                    "then": {
+                        "not": {
+                            "required": [
+                                "specimen"
+                            ]
+                        },
+                        "properties": {
+                            "brain_region": {},
+                            "laterality": {},
+                            "specimen": {}
+                        },
+                        "required": [
+                            "brain_region",
+                            "laterality"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "modality": {
+                                "const": "SPECIMEN"
+                            }
+                        },
+                        "required": [
+                            "modality"
+                        ]
+                    },
+                    "then": {
+                        "not": {
+                            "required": [
+                                "brain_region"
+                            ]
+                        },
+                        "properties": {
+                            "brain_region": {},
+                            "specimen": {}
+                        },
+                        "required": [
+                            "specimen"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "curator_type": {
+                                "const": "PERSON"
+                            }
+                        },
+                        "required": [
+                            "curator_type"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "curator": {
+                                "pattern": "^ORCID:[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+                            }
+                        },
+                        "required": [
+                            "curator"
+                        ]
+                    }
+                }
+            ],
+            "description": "One biomarker value for one analyte at one visit, from a specimen (fluid or tissue) or from imaging.",
+            "properties": {
+                "analyte": {
+                    "description": "The analyte that was measured.",
+                    "type": "string"
+                },
+                "assay": {
+                    "description": "The assay that produced the value.",
+                    "type": "string"
+                },
+                "below_lloq": {
+                    "description": "True when the value is below the assay's lower limit of quantification.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "brain_region": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/BrainRegionEnum"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Brain region of an imaging measurement, as an UBERON term."
+                },
+                "categorical_result": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/CategoricalResultEnum"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Result of a qualitative assay."
+                },
+                "curation_date": {
+                    "description": "Date the record was curated.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "curator": {
+                    "description": "Who curated the record: an ORCID for a person, or a versioned agent identifier for an AI agent.",
+                    "type": "string"
+                },
+                "curator_type": {
+                    "$ref": "#/$defs/CuratorTypeEnum",
+                    "description": "Whether the curator was a person or an AI agent."
+                },
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "laterality": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/LateralityEnum"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Side of the body the imaging value refers to."
+                },
+                "loinc_code": {
+                    "description": "LOINC code of the laboratory test, where one exists.",
+                    "pattern": "^LOINC:[0-9]{1,7}-[0-9]$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "measurement_type": {
+                    "$ref": "#/$defs/MeasurementTypeEnum",
+                    "description": "Kind of quantity the value represents."
+                },
+                "modality": {
+                    "$ref": "#/$defs/ModalityEnum",
+                    "description": "Whether the value comes from a specimen or from imaging."
+                },
+                "platform_probe_id": {
+                    "description": "Platform-specific reagent identifier: a SomaScan SeqId (e.g. seq.12345.6) or an Olink assay ID (e.g. OID12345).",
+                    "pattern": "^(seq\\.[0-9]{4,5}\\.[0-9]{1,3}|OID[0-9]{5})$",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "source": {
+                    "description": "Identifier or name of the source dataset, file or system the record was taken from.",
+                    "type": "string"
+                },
+                "specimen": {
+                    "description": "The specimen that was assayed. Absent for imaging measurements.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "unit": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/UnitEnum"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Unit of the value, as a UCUM code."
+                },
+                "value": {
+                    "description": "Numeric value of a quantitative measurement.",
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "visit": {
+                    "description": "The visit at which this record was collected.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "visit",
+                "assay",
+                "analyte",
+                "modality",
+                "measurement_type",
+                "source",
+                "curation_date",
+                "curator",
+                "curator_type",
+                "id"
+            ],
+            "title": "BiomarkerMeasurement",
+            "type": "object"
+        },
+        "BrainRegionEnum": {
+            "description": "Any part of the brain in UBERON.",
+            "title": "BrainRegionEnum",
+            "type": "string"
+        },
+        "CategoricalResultEnum": {
+            "description": "Result of a qualitative assay.",
+            "enum": [
+                "POSITIVE",
+                "NEGATIVE",
+                "INDETERMINATE"
+            ],
+            "title": "CategoricalResultEnum",
+            "type": "string"
+        },
+        "ClinicalAssessment": {
+            "additionalProperties": false,
+            "description": "The total score of a clinical rating scale administered at a visit. Disease modules subclass this and bind the instrument to their own value set.",
+            "properties": {
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "instrument": {
+                    "description": "The rating scale and score that was recorded. Disease modules bind this to their own value set.",
+                    "type": "string"
+                },
+                "score": {
+                    "description": "Total score on the instrument.",
+                    "type": "number"
+                },
+                "visit": {
+                    "description": "The visit at which this record was collected.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "visit",
+                "instrument",
+                "score",
+                "id"
+            ],
+            "title": "ClinicalAssessment",
+            "type": "object"
+        },
+        "CohortEnum": {
+            "description": "Study arm a participant was enrolled in.",
+            "enum": [
+                "CASE",
+                "HEALTHY_CONTROL",
+                "PRODROMAL"
+            ],
+            "title": "CohortEnum",
+            "type": "string"
+        },
+        "CuratorTypeEnum": {
+            "description": "Kind of agent that curated a record.",
+            "enum": [
+                "PERSON",
+                "AI_AGENT"
+            ],
+            "title": "CuratorTypeEnum",
+            "type": "string"
+        },
+        "Diagnosis": {
+            "additionalProperties": false,
+            "description": "A clinical diagnosis recorded for a participant.",
+            "properties": {
+                "age_at_diagnosis": {
+                    "description": "Age in years when the condition was diagnosed.",
+                    "maximum": 120,
+                    "minimum": 0,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "age_at_symptom_onset": {
+                    "description": "Age in years at onset of the first symptom attributed to the condition.",
+                    "maximum": 120,
+                    "minimum": 0,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "condition": {
+                    "$ref": "#/$defs/DiseaseEnum",
+                    "description": "Diagnosed condition, as a MONDO term."
+                },
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "participant": {
+                    "description": "The participant this record belongs to.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "participant",
+                "condition",
+                "id"
+            ],
+            "title": "Diagnosis",
+            "type": "object"
+        },
+        "DiagnosticCertaintyEnum": {
+            "description": "Level of diagnostic certainty defined by the criteria.",
+            "enum": [
+                "CLINICALLY_ESTABLISHED",
+                "PROBABLE",
+                "POSSIBLE"
+            ],
+            "title": "DiagnosticCertaintyEnum",
+            "type": "string"
+        },
+        "DiagnosticCriteriaEnum": {
+            "description": "Published clinical diagnostic criteria for parkinsonian disorders.",
+            "enum": [
+                "MDS_PD_2015",
+                "UK_PDS_BRAIN_BANK",
+                "MDS_MSA_2022",
+                "MDS_PSP_2017",
+                "DLB_CONSORTIUM_2017"
+            ],
+            "title": "DiagnosticCriteriaEnum",
+            "type": "string"
+        },
+        "DiseaseEnum": {
+            "description": "Any disease in MONDO.",
+            "title": "DiseaseEnum",
+            "type": "string"
+        },
+        "LateralityEnum": {
+            "description": "Side of the body.",
+            "enum": [
+                "LEFT",
+                "RIGHT",
+                "BILATERAL"
+            ],
+            "title": "LateralityEnum",
+            "type": "string"
+        },
+        "MeasurementTypeEnum": {
+            "description": "Kind of quantity a biomarker value represents.",
+            "enum": [
+                "CONCENTRATION",
+                "RELATIVE_ABUNDANCE",
+                "RATIO",
+                "CATEGORICAL"
+            ],
+            "title": "MeasurementTypeEnum",
+            "type": "string"
+        },
+        "MedicationStateEnum": {
+            "description": "Dopaminergic medication state during a motor examination.",
+            "enum": [
+                "ON",
+                "OFF",
+                "UNTREATED"
+            ],
+            "title": "MedicationStateEnum",
+            "type": "string"
+        },
+        "ModalityEnum": {
+            "description": "Source of a biomarker value.",
+            "enum": [
+                "SPECIMEN",
+                "IMAGING"
+            ],
+            "title": "ModalityEnum",
+            "type": "string"
+        },
+        "NamedThing": {
+            "additionalProperties": false,
+            "description": "Any record with a globally unique identifier.",
+            "properties": {
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "NamedThing",
+            "type": "object"
+        },
+        "ParkinsonianDisorderEnum": {
+            "description": "Parkinson disease and the atypical parkinsonian disorders it is most often distinguished from. MONDO files multiple system atrophy and Lewy body dementia under synucleinopathy, and progressive supranuclear palsy under movement disorder, rather than under parkinsonian disorder, so each is listed as its own root.",
+            "title": "ParkinsonianDisorderEnum",
+            "type": "string"
+        },
+        "ParkinsonsClinicalAssessment": {
+            "additionalProperties": false,
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "instrument": {
+                                "const": "MDS_UPDRS_PART_I"
+                            }
+                        },
+                        "required": [
+                            "instrument"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "score": {
+                                "maximum": 52,
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "score"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "instrument": {
+                                "const": "MDS_UPDRS_PART_II"
+                            }
+                        },
+                        "required": [
+                            "instrument"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "score": {
+                                "maximum": 52,
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "score"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "instrument": {
+                                "const": "MDS_UPDRS_PART_III"
+                            }
+                        },
+                        "required": [
+                            "instrument"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "score": {
+                                "maximum": 132,
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "score"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "instrument": {
+                                "const": "MDS_UPDRS_PART_IV"
+                            }
+                        },
+                        "required": [
+                            "instrument"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "score": {
+                                "maximum": 24,
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "score"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "instrument": {
+                                "const": "HOEHN_YAHR"
+                            }
+                        },
+                        "required": [
+                            "instrument"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "score": {
+                                "maximum": 5,
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "score"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "instrument": {
+                                "const": "MOCA"
+                            }
+                        },
+                        "required": [
+                            "instrument"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "score": {
+                                "maximum": 30,
+                                "minimum": 0
+                            }
+                        },
+                        "required": [
+                            "score"
+                        ]
+                    }
+                },
+                {
+                    "if": {
+                        "properties": {
+                            "instrument": {
+                                "enum": [
+                                    "MDS_UPDRS_PART_III",
+                                    "HOEHN_YAHR"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "instrument"
+                        ]
+                    },
+                    "then": {
+                        "properties": {
+                            "medication_state": {}
+                        },
+                        "required": [
+                            "medication_state"
+                        ]
+                    }
+                }
+            ],
+            "description": "Total score on a Parkinson's rating scale, with the dopaminergic medication state at the time of a motor examination.",
+            "properties": {
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "instrument": {
+                    "$ref": "#/$defs/ParkinsonsInstrumentEnum",
+                    "description": "The rating scale and score that was recorded. Disease modules bind this to their own value set."
+                },
+                "medication_state": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/MedicationStateEnum"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Dopaminergic medication state during a motor examination."
+                },
+                "score": {
+                    "description": "Total score on the instrument.",
+                    "type": "number"
+                },
+                "visit": {
+                    "description": "The visit at which this record was collected.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "visit",
+                "instrument",
+                "score",
+                "id"
+            ],
+            "title": "ParkinsonsClinicalAssessment",
+            "type": "object"
+        },
+        "ParkinsonsDiagnosis": {
+            "additionalProperties": false,
+            "description": "Diagnosis of a parkinsonian disorder, with the clinical criteria used and their level of certainty.",
+            "properties": {
+                "age_at_diagnosis": {
+                    "description": "Age in years when the condition was diagnosed.",
+                    "maximum": 120,
+                    "minimum": 0,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "age_at_symptom_onset": {
+                    "description": "Age in years at onset of the first symptom attributed to the condition.",
+                    "maximum": 120,
+                    "minimum": 0,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "condition": {
+                    "$ref": "#/$defs/ParkinsonianDisorderEnum",
+                    "description": "Diagnosed condition, as a MONDO term."
+                },
+                "diagnostic_certainty": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/DiagnosticCertaintyEnum"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Level of certainty reached under the diagnostic criteria."
+                },
+                "diagnostic_criteria": {
+                    "$ref": "#/$defs/DiagnosticCriteriaEnum",
+                    "description": "Published clinical diagnostic criteria applied."
+                },
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "participant": {
+                    "description": "The participant this record belongs to.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "diagnostic_criteria",
+                "participant",
+                "condition",
+                "id"
+            ],
+            "title": "ParkinsonsDiagnosis",
+            "type": "object"
+        },
+        "ParkinsonsInstrumentEnum": {
+            "description": "Rating scale totals recorded in Parkinson's studies. LOINC covers the MoCA total but not MDS-UPDRS: its UPDRS codes describe the original 1987 scale, which has different items and ranges.",
+            "enum": [
+                "MDS_UPDRS_PART_I",
+                "MDS_UPDRS_PART_II",
+                "MDS_UPDRS_PART_III",
+                "MDS_UPDRS_PART_IV",
+                "HOEHN_YAHR",
+                "MOCA"
+            ],
+            "title": "ParkinsonsInstrumentEnum",
+            "type": "string"
+        },
+        "ParkinsonsStudyDataset": {
+            "additionalProperties": false,
+            "description": "A study dataset whose diagnoses and assessments follow the Parkinson's module.",
+            "properties": {
+                "analytes": {
+                    "description": "Analytes measured in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Analyte"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "assays": {
+                    "description": "Assays used in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Assay"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "biomarker_measurements": {
+                    "description": "Biomarker measurements in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/BiomarkerMeasurement"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "clinical_assessments": {
+                    "description": "Clinical assessments in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/ParkinsonsClinicalAssessment"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "conforms_to": {
+                    "description": "Identifier of the schema version the dataset conforms to.",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "created_on": {
+                    "description": "Date the dataset was created.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "dataset_version": {
+                    "description": "Version of the dataset, in semantic versioning form.",
+                    "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "Free-text description of the dataset.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "diagnoses": {
+                    "description": "Diagnoses in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/ParkinsonsDiagnosis"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "is_synthetic": {
+                    "description": "True when every record in the dataset is synthetic.",
+                    "type": "boolean"
+                },
+                "license": {
+                    "description": "Licence under which the dataset is released, as a URI.",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "participants": {
+                    "description": "Participants in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Participant"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "phenotype_observations": {
+                    "description": "Phenotype observations in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/PhenotypeObservation"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "specimens": {
+                    "description": "Specimens in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Specimen"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "title": {
+                    "description": "Human-readable title of the dataset.",
+                    "type": "string"
+                },
+                "visits": {
+                    "description": "Visits in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Visit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "title",
+                "dataset_version",
+                "license",
+                "created_on",
+                "conforms_to",
+                "is_synthetic",
+                "id"
+            ],
+            "title": "ParkinsonsStudyDataset",
+            "type": "object"
+        },
+        "Participant": {
+            "additionalProperties": false,
+            "description": "A person enrolled in the study.",
+            "properties": {
+                "cohort": {
+                    "$ref": "#/$defs/CohortEnum",
+                    "description": "Study arm the participant was enrolled in."
+                },
+                "enrolment_date": {
+                    "description": "Date the participant was enrolled.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "sex": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/SexEnum"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Biological sex of the participant."
+                },
+                "year_of_birth": {
+                    "description": "Year of birth (full dates of birth are not recorded).",
+                    "maximum": 2026,
+                    "minimum": 1900,
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "cohort",
+                "enrolment_date",
+                "id"
+            ],
+            "title": "Participant",
+            "type": "object"
+        },
+        "PhenotypeEnum": {
+            "description": "Any phenotypic abnormality in HPO.",
+            "title": "PhenotypeEnum",
+            "type": "string"
+        },
+        "PhenotypeObservation": {
+            "additionalProperties": false,
+            "description": "A phenotypic feature assessed at a visit, recorded as present or explicitly excluded.",
+            "properties": {
+                "excluded": {
+                    "description": "True when the feature was looked for and found absent.",
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "phenotype": {
+                    "$ref": "#/$defs/PhenotypeEnum",
+                    "description": "Phenotypic feature, as an HPO term."
+                },
+                "visit": {
+                    "description": "The visit at which this record was collected.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "visit",
+                "phenotype",
+                "id"
+            ],
+            "title": "PhenotypeObservation",
+            "type": "object"
+        },
+        "PlatformEnum": {
+            "description": "Commercial platform and panel version.",
+            "enum": [
+                "SOMASCAN_5K",
+                "SOMASCAN_7K",
+                "OLINK_EXPLORE_3072",
+                "OLINK_EXPLORE_HT",
+                "SIMOA_HD_X",
+                "DAT_SPECT_IOFLUPANE"
+            ],
+            "title": "PlatformEnum",
+            "type": "string"
+        },
+        "ProvenanceMixin": {
+            "additionalProperties": false,
+            "description": "Who curated a record, when, from which source, and whether the curator was a person or an AI agent.",
+            "properties": {
+                "curation_date": {
+                    "description": "Date the record was curated.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "curator": {
+                    "description": "Who curated the record: an ORCID for a person, or a versioned agent identifier for an AI agent.",
+                    "type": "string"
+                },
+                "curator_type": {
+                    "$ref": "#/$defs/CuratorTypeEnum",
+                    "description": "Whether the curator was a person or an AI agent."
+                },
+                "source": {
+                    "description": "Identifier or name of the source dataset, file or system the record was taken from.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "source",
+                "curation_date",
+                "curator",
+                "curator_type"
+            ],
+            "title": "ProvenanceMixin",
+            "type": "object"
+        },
+        "SexEnum": {
+            "description": "Biological sex.",
+            "enum": [
+                "FEMALE",
+                "MALE"
+            ],
+            "title": "SexEnum",
+            "type": "string"
+        },
+        "Specimen": {
+            "additionalProperties": false,
+            "description": "A biological sample collected at a visit.",
+            "properties": {
+                "freeze_thaw_cycles": {
+                    "description": "Number of freeze-thaw cycles before analysis.",
+                    "maximum": 20,
+                    "minimum": 0,
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "specimen_type": {
+                    "$ref": "#/$defs/SpecimenTypeEnum",
+                    "description": "Anatomical material of the specimen, as an UBERON term."
+                },
+                "visit": {
+                    "description": "The visit at which this record was collected.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "visit",
+                "specimen_type",
+                "id"
+            ],
+            "title": "Specimen",
+            "type": "object"
+        },
+        "SpecimenTypeEnum": {
+            "description": "Anatomical material a specimen consists of.",
+            "enum": [
+                "CSF",
+                "PLASMA",
+                "SERUM",
+                "WHOLE_BLOOD",
+                "SKIN"
+            ],
+            "title": "SpecimenTypeEnum",
+            "type": "string"
+        },
+        "StudyDataset": {
+            "additionalProperties": false,
+            "description": "A versioned collection of cohort records with dataset-level metadata. Records refer to each other by identifier.",
+            "properties": {
+                "analytes": {
+                    "description": "Analytes measured in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Analyte"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "assays": {
+                    "description": "Assays used in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Assay"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "biomarker_measurements": {
+                    "description": "Biomarker measurements in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/BiomarkerMeasurement"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "clinical_assessments": {
+                    "description": "Clinical assessments in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/ClinicalAssessment"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "conforms_to": {
+                    "description": "Identifier of the schema version the dataset conforms to.",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "created_on": {
+                    "description": "Date the dataset was created.",
+                    "format": "date",
+                    "type": "string"
+                },
+                "dataset_version": {
+                    "description": "Version of the dataset, in semantic versioning form.",
+                    "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "Free-text description of the dataset.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "diagnoses": {
+                    "description": "Diagnoses in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Diagnosis"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "is_synthetic": {
+                    "description": "True when every record in the dataset is synthetic.",
+                    "type": "boolean"
+                },
+                "license": {
+                    "description": "Licence under which the dataset is released, as a URI.",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "participants": {
+                    "description": "Participants in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Participant"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "phenotype_observations": {
+                    "description": "Phenotype observations in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/PhenotypeObservation"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "specimens": {
+                    "description": "Specimens in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Specimen"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "title": {
+                    "description": "Human-readable title of the dataset.",
+                    "type": "string"
+                },
+                "visits": {
+                    "description": "Visits in the dataset.",
+                    "items": {
+                        "$ref": "#/$defs/Visit"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "title",
+                "dataset_version",
+                "license",
+                "created_on",
+                "conforms_to",
+                "is_synthetic",
+                "id"
+            ],
+            "title": "StudyDataset",
+            "type": "object"
+        },
+        "UnitEnum": {
+            "description": "Units as case-sensitive UCUM codes. Curly-brace codes are UCUM annotations for arbitrary, platform-specific units.",
+            "enum": [
+                "pg/mL",
+                "ng/mL",
+                "1",
+                "{RFU}",
+                "{NPX}"
+            ],
+            "title": "UnitEnum",
+            "type": "string"
+        },
+        "Visit": {
+            "additionalProperties": false,
+            "description": "A scheduled study visit at which data and specimens are collected.",
+            "properties": {
+                "id": {
+                    "description": "Globally unique identifier of the record, written as a CURIE.",
+                    "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+                    "type": "string"
+                },
+                "participant": {
+                    "description": "The participant this record belongs to.",
+                    "type": "string"
+                },
+                "visit_code": {
+                    "description": "Protocol visit code as months from baseline, e.g. M00 for baseline and M12 for month 12.",
+                    "pattern": "^M[0-9]{2,3}$",
+                    "type": "string"
+                },
+                "visit_date": {
+                    "description": "Date the visit took place.",
+                    "format": "date",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "participant",
+                "visit_code",
+                "visit_date",
+                "id"
+            ],
+            "title": "Visit",
+            "type": "object"
+        }
+    },
+    "$id": "https://w3id.org/pd-biomarker-model",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": false,
+    "description": "A study dataset whose diagnoses and assessments follow the Parkinson's module.",
+    "metamodel_version": "1.12.0",
+    "properties": {
+        "analytes": {
+            "description": "Analytes measured in the dataset.",
+            "items": {
+                "$ref": "#/$defs/Analyte"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "assays": {
+            "description": "Assays used in the dataset.",
+            "items": {
+                "$ref": "#/$defs/Assay"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "biomarker_measurements": {
+            "description": "Biomarker measurements in the dataset.",
+            "items": {
+                "$ref": "#/$defs/BiomarkerMeasurement"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "clinical_assessments": {
+            "description": "Clinical assessments in the dataset.",
+            "items": {
+                "$ref": "#/$defs/ParkinsonsClinicalAssessment"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "conforms_to": {
+            "description": "Identifier of the schema version the dataset conforms to.",
+            "format": "uri",
+            "type": "string"
+        },
+        "created_on": {
+            "description": "Date the dataset was created.",
+            "format": "date",
+            "type": "string"
+        },
+        "dataset_version": {
+            "description": "Version of the dataset, in semantic versioning form.",
+            "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+            "type": "string"
+        },
+        "description": {
+            "description": "Free-text description of the dataset.",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "diagnoses": {
+            "description": "Diagnoses in the dataset.",
+            "items": {
+                "$ref": "#/$defs/ParkinsonsDiagnosis"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "id": {
+            "description": "Globally unique identifier of the record, written as a CURIE.",
+            "pattern": "^[A-Za-z][A-Za-z0-9_.-]*:[A-Za-z0-9_./-]+$",
+            "type": "string"
+        },
+        "is_synthetic": {
+            "description": "True when every record in the dataset is synthetic.",
+            "type": "boolean"
+        },
+        "license": {
+            "description": "Licence under which the dataset is released, as a URI.",
+            "format": "uri",
+            "type": "string"
+        },
+        "participants": {
+            "description": "Participants in the dataset.",
+            "items": {
+                "$ref": "#/$defs/Participant"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "phenotype_observations": {
+            "description": "Phenotype observations in the dataset.",
+            "items": {
+                "$ref": "#/$defs/PhenotypeObservation"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "specimens": {
+            "description": "Specimens in the dataset.",
+            "items": {
+                "$ref": "#/$defs/Specimen"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "title": {
+            "description": "Human-readable title of the dataset.",
+            "type": "string"
+        },
+        "visits": {
+            "description": "Visits in the dataset.",
+            "items": {
+                "$ref": "#/$defs/Visit"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        }
+    },
+    "required": [
+        "title",
+        "dataset_version",
+        "license",
+        "created_on",
+        "conforms_to",
+        "is_synthetic",
+        "id"
+    ],
+    "title": "pd_biomarker_model",
+    "type": "object",
+    "version": "0.1.0"
+}
+

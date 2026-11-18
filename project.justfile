@@ -16,3 +16,18 @@ gen-diagram:
 [group('model development')]
 docs: gen-diagram gen-doc
   uv run mkdocs build --strict
+
+artifact_dir := "artifacts"
+
+# Generate the committed artifacts: JSON Schema, SQL DDL, Pydantic and dataclass models, diagram
+[group('model development')]
+gen-artifacts: gen-python gen-diagram
+  mkdir -p {{artifact_dir}}/jsonschema {{artifact_dir}}/sql
+  uv run gen-json-schema --no-metadata {{source_schema_path}} > {{artifact_dir}}/jsonschema/{{schema_name}}.schema.json
+  uv run gen-sqltables --no-metadata --generate_abstract_class_ddl false {{source_schema_path}} > {{artifact_dir}}/sql/{{schema_name}}.sql
+
+# Fail if any committed artifact differs from what the schema generates
+[group('model development')]
+check-artifacts: gen-artifacts
+  git add --intent-to-add {{artifact_dir}} {{pymodel}} {{diagram_page}}
+  git diff --exit-code --stat -- {{artifact_dir}} {{pymodel}} {{diagram_page}} || (echo "Generated artifacts are out of date: run 'just gen-artifacts' and commit." && exit 1)

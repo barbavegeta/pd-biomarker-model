@@ -48,6 +48,7 @@ generator_args:
   #   mergeimports: true
   python:
     mergeimports: true
+    metadata: false
     # head: true  # Why does this not work?
   prefixmap:
     mergeimports: true
