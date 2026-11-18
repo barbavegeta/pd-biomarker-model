@@ -55,13 +55,19 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
   # write markdown inside of HTML
   - md_in_html
+  # include CHANGELOG.md from the repository root
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
 
 watch:
   - src/pd_biomarker_model/schema
 
 nav:
   - Home: index.md
-  - Schema: elements/index.md
+  - Model diagram: diagram.md
+  - Schema reference: elements/index.md
+  - Changelog: changelog.md
   - About: about.md
 
 exclude_docs: |
