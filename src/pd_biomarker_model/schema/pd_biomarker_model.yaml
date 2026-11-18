@@ -1,98 +1,264 @@
----
-id: https://w3id.org/barbavegeta/pd-biomarker-model
-name: pd-biomarker-model
-title: pd-biomarker-model
-description: |-
-  LinkML data model for Parkinson's disease phenotypes and biomarkers, with ontology-bound value sets, validation and AI-assisted SSSOM mapping on synthetic data
+id: https://w3id.org/pd-biomarker-model
+name: pd_biomarker_model
+title: Parkinson's disease biomarker model
+description: >-
+  Parkinson's disease module of the clinical biomarker core. It narrows
+  diagnoses to parkinsonian disorders, binds clinical assessments to
+  MDS-UPDRS, MoCA and Hoehn and Yahr, and adds instrument-specific
+  validation rules.
+version: 0.1.0
 license: MIT
 see_also:
   - https://barbavegeta.github.io/pd-biomarker-model
 
 prefixes:
-  pd_biomarker_model: https://w3id.org/barbavegeta/pd-biomarker-model/
   linkml: https://w3id.org/linkml/
-  biolink: https://w3id.org/biolink/vocab/
+  pdbm: https://w3id.org/pd-biomarker-model/
   schema: http://schema.org/
+  dcterms: http://purl.org/dc/terms/
+  prov: http://www.w3.org/ns/prov#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  BFO: http://purl.obolibrary.org/obo/BFO_
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
+  HP: http://purl.obolibrary.org/obo/HP_
+  UBERON: http://purl.obolibrary.org/obo/UBERON_
+  OBI: http://purl.obolibrary.org/obo/OBI_
   PATO: http://purl.obolibrary.org/obo/PATO_
-  example: http://www.example.org/rdf#
-default_prefix: pd_biomarker_model
+  NCIT: http://purl.obolibrary.org/obo/NCIT_
+  STATO: http://purl.obolibrary.org/obo/STATO_
+  UO: http://purl.obolibrary.org/obo/UO_
+  PRIDE: http://purl.obolibrary.org/obo/PRIDE_
+  CHEBI: http://purl.obolibrary.org/obo/CHEBI_
+  LOINC: https://loinc.org/
+  UniProtKB: http://purl.uniprot.org/uniprot/
+  HGNC: http://identifiers.org/hgnc/
+  ORCID: https://orcid.org/
+  doi: https://doi.org/
+
+default_prefix: pdbm
 default_range: string
 
 imports:
   - linkml:types
+  - core
 
 classes:
 
-  NamedThing:
-    description: >-
-      A generic grouping for any identifiable entity
-    slots:
-      - id
-      - name
-      - description
-    class_uri: schema:Thing
-
-  Person:
-    is_a: NamedThing
-    description: >-
-      Represents a Person
-    slots:
-      - primary_email
-      - birth_date
-      - age_in_years
-      - vital_status
-    slot_usage:
-      primary_email:
-        pattern: "^\\S+@[\\S+\\.]+\\S+"
-
-  PersonCollection:
+  ParkinsonsStudyDataset:
+    is_a: StudyDataset
     tree_root: true
+    description: A study dataset whose diagnoses and assessments follow the Parkinson's module.
+    slot_usage:
+      diagnoses:
+        range: ParkinsonsDiagnosis
+      clinical_assessments:
+        range: ParkinsonsClinicalAssessment
+
+  ParkinsonsDiagnosis:
+    is_a: Diagnosis
     description: >-
-      A holder for Person objects
-    attributes:
-      people:
-        range: Person
-        multivalued: true
-        inlined_as_list: true
+      Diagnosis of a parkinsonian disorder, with the clinical criteria used
+      and their level of certainty.
+    slot_usage:
+      condition:
+        range: ParkinsonianDisorderEnum
+    slots:
+      - diagnostic_criteria
+      - diagnostic_certainty
+
+  ParkinsonsClinicalAssessment:
+    is_a: ClinicalAssessment
+    description: >-
+      Total score on a Parkinson's rating scale, with the dopaminergic
+      medication state at the time of a motor examination.
+    slot_usage:
+      instrument:
+        range: ParkinsonsInstrumentEnum
+    slots:
+      - medication_state
+    rules:
+      - description: MDS-UPDRS Part I total ranges from 0 to 52.
+        preconditions:
+          slot_conditions:
+            instrument:
+              equals_string: MDS_UPDRS_PART_I
+        postconditions:
+          slot_conditions:
+            score:
+              minimum_value: 0
+              maximum_value: 52
+      - description: MDS-UPDRS Part II total ranges from 0 to 52.
+        preconditions:
+          slot_conditions:
+            instrument:
+              equals_string: MDS_UPDRS_PART_II
+        postconditions:
+          slot_conditions:
+            score:
+              minimum_value: 0
+              maximum_value: 52
+      - description: MDS-UPDRS Part III total ranges from 0 to 132.
+        preconditions:
+          slot_conditions:
+            instrument:
+              equals_string: MDS_UPDRS_PART_III
+        postconditions:
+          slot_conditions:
+            score:
+              minimum_value: 0
+              maximum_value: 132
+      - description: MDS-UPDRS Part IV total ranges from 0 to 24.
+        preconditions:
+          slot_conditions:
+            instrument:
+              equals_string: MDS_UPDRS_PART_IV
+        postconditions:
+          slot_conditions:
+            score:
+              minimum_value: 0
+              maximum_value: 24
+      - description: Hoehn and Yahr stage ranges from 0 to 5.
+        preconditions:
+          slot_conditions:
+            instrument:
+              equals_string: HOEHN_YAHR
+        postconditions:
+          slot_conditions:
+            score:
+              minimum_value: 0
+              maximum_value: 5
+      - description: MoCA total ranges from 0 to 30.
+        preconditions:
+          slot_conditions:
+            instrument:
+              equals_string: MOCA
+        postconditions:
+          slot_conditions:
+            score:
+              minimum_value: 0
+              maximum_value: 30
+      - description: >-
+          Motor examination scores depend on medication, so MDS-UPDRS Part III
+          and Hoehn and Yahr need the medication state.
+        preconditions:
+          slot_conditions:
+            instrument:
+              equals_string_in:
+                - MDS_UPDRS_PART_III
+                - HOEHN_YAHR
+        postconditions:
+          slot_conditions:
+            medication_state:
+              required: true
 
 slots:
-  id:
-    identifier: true
-    slot_uri: schema:identifier
-    range: uriorcurie
-    description: A unique identifier for a thing
-  name:
-    slot_uri: schema:name
-    description: A human-readable name for a thing
-  description:
-    slot_uri: schema:description
-    description: A human-readable description for a thing
-  primary_email:
-    slot_uri: schema:email
-    description: The main email address of a person
-  birth_date:
-    slot_uri: schema:birthDate
-    range: date
-    description: Date on which a person is born
-  age_in_years:
-    range: integer
-    description: Number of years since birth
-  vital_status:
-    range: PersonStatus
-    description: living or dead status
+
+  diagnostic_criteria:
+    description: Published clinical diagnostic criteria applied.
+    range: DiagnosticCriteriaEnum
+    required: true
+  diagnostic_certainty:
+    description: Level of certainty reached under the diagnostic criteria.
+    range: DiagnosticCertaintyEnum
+  medication_state:
+    description: Dopaminergic medication state during a motor examination.
+    range: MedicationStateEnum
 
 enums:
-  PersonStatus:
-    description:
-      The vital status of a person
+
+  ParkinsonianDisorderEnum:
+    description: >-
+      Parkinson disease and the atypical parkinsonian disorders it is most
+      often distinguished from. MONDO files multiple system atrophy and
+      Lewy body dementia under synucleinopathy, and progressive supranuclear
+      palsy under movement disorder, rather than under parkinsonian
+      disorder, so each is listed as its own root.
+    reachable_from:
+      source_ontology: obo:mondo
+      source_nodes:
+        - MONDO:0021095  # parkinsonian disorder
+        - MONDO:0007803  # multiple system atrophy
+        - MONDO:0019037  # progressive supranuclear palsy
+        - MONDO:0007488  # Lewy body dementia
+      relationship_types:
+        - rdfs:subClassOf
+      include_self: true
+
+  ParkinsonsInstrumentEnum:
+    description: >-
+      Rating scale totals recorded in Parkinson's studies. LOINC covers the
+      MoCA total but not MDS-UPDRS: its UPDRS codes describe the original
+      1987 scale, which has different items and ranges.
     permissible_values:
-      ALIVE:
-        description: the person is living
-        meaning: PATO:0001421
-      DEAD:
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        description: the vital status is not known
-        todos:
-          - map this to an ontology
+      MDS_UPDRS_PART_I:
+        description: MDS-UPDRS Part I (non-motor experiences of daily living) total, 0-52.
+        broad_mappings:
+          - NCIT:C100769
+      MDS_UPDRS_PART_II:
+        description: MDS-UPDRS Part II (motor experiences of daily living) total, 0-52.
+        broad_mappings:
+          - NCIT:C100769
+      MDS_UPDRS_PART_III:
+        description: MDS-UPDRS Part III (motor examination) total, 0-132.
+        broad_mappings:
+          - NCIT:C100769
+      MDS_UPDRS_PART_IV:
+        description: MDS-UPDRS Part IV (motor complications) total, 0-24.
+        broad_mappings:
+          - NCIT:C100769
+      HOEHN_YAHR:
+        description: Hoehn and Yahr stage as rated in MDS-UPDRS, 0-5.
+        title: "MDS-UPDRS - Hoehn and Yahr Stage"
+        meaning: NCIT:C100535
+        related_mappings:
+          - LOINC:77714-4
+      MOCA:
+        description: Montreal Cognitive Assessment total score, 0-30.
+        title: "Total score [MoCA]"
+        meaning: LOINC:72172-0
+        close_mappings:
+          - NCIT:C162720
+
+  DiagnosticCriteriaEnum:
+    description: Published clinical diagnostic criteria for parkinsonian disorders.
+    permissible_values:
+      MDS_PD_2015:
+        description: MDS clinical diagnostic criteria for Parkinson's disease (Postuma et al., 2015).
+        see_also:
+          - doi:10.1002/mds.26424
+      UK_PDS_BRAIN_BANK:
+        description: UK Parkinson's Disease Society Brain Bank criteria (Hughes et al., 1992).
+        see_also:
+          - doi:10.1136/jnnp.55.3.181
+      MDS_MSA_2022:
+        description: MDS criteria for multiple system atrophy (Wenning et al., 2022).
+        see_also:
+          - doi:10.1002/mds.29005
+      MDS_PSP_2017:
+        description: MDS criteria for progressive supranuclear palsy (Höglinger et al., 2017).
+        see_also:
+          - doi:10.1002/mds.26987
+      DLB_CONSORTIUM_2017:
+        description: Fourth consensus report of the DLB Consortium (McKeith et al., 2017).
+        see_also:
+          - doi:10.1212/WNL.0000000000004058
+
+  DiagnosticCertaintyEnum:
+    description: Level of diagnostic certainty defined by the criteria.
+    permissible_values:
+      CLINICALLY_ESTABLISHED:
+        description: Clinically established (MDS PD and MSA criteria).
+      PROBABLE:
+        description: Probable.
+      POSSIBLE:
+        description: Possible (PSP and DLB criteria).
+
+  MedicationStateEnum:
+    description: Dopaminergic medication state during a motor examination.
+    permissible_values:
+      "ON":
+        description: Examined while responding to dopaminergic medication.
+      "OFF":
+        description: Examined after withholding dopaminergic medication.
+      UNTREATED:
+        description: Not yet taking dopaminergic medication.

@@ -1,0 +1,15 @@
+extends: recommended
+rules:
+  standard_naming:
+    permissible_values_upper_case: true
+    # UnitEnum values are UCUM codes: case-sensitive and kept verbatim.
+    exclude:
+      - pg/mL
+      - ng/mL
+      - "1"
+      - "{RFU}"
+      - "{NPX}"
+  canonical_prefixes:
+    # Namespaces follow the IRIs the sources publish (PRIDE CV terms are
+    # served as OBO PURLs; ORCID iDs as https://orcid.org/), not identifiers.org.
+    level: disabled

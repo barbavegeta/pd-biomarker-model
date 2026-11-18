@@ -23,6 +23,9 @@ generator_args:
     type_objects: false
     add_root_classes: true
     mixins_as_expressions: true
+    # Disease modules subclass abstract core classes; don't declare an abstract
+    # class equivalent to the union of the subclasses that happen to exist.
+    skip_abstract_class_as_unionof_subclasses: true
   markdown:
     mergeimports: true
     directory: "docs/elements"
