@@ -1,0 +1,69 @@
+variable_id	variable_name	description	unit
+src:V001	SUBJ_NO	participant number (study)	
+src:V002	site	recruiting centre	
+src:V003	Gender (M/F)	biological sex as recorded at screening	
+src:V004	yob	year of birth	
+src:V005	EDUC_YRS	years in formal education	years
+src:V006	handed	dominant hand R/L/both	
+src:V007	enrol_dt	date of baseline enrolment	
+src:V008	consent_dt	date informed consent signed	
+src:V009	FHx PD (1st deg)	any first degree relative with Parkinson's	
+src:V010	PD dx	clinical diagnosis of idiopathic PD, 1=yes	
+src:V011	MSA-P dx	MSA, parkinsonian variant	
+src:V012	PSP_dx	progressive supranuclear palsy (clinical)	
+src:V013	DLB	dementia w/ Lewy bodies (consensus criteria)	
+src:V014	age_sx_onset	age at first motor symptom	years
+src:V015	age_dx	age when PD diagnosed	years
+src:V016	LRRK2 G2019S	LRRK2 p.G2019S carrier (genotyped)	
+src:V017	brady	bradykinesia present on exam	
+src:V018	RT	rest tremor (any limb)	
+src:V019	rigid	rigidity on exam	
+src:V020	post instab	postural instability (pull test abnl)	
+src:V021	FOG	freezing episodes when walking	
+src:V022	hyposmia (subj)	reduced sense of smell, self report	
+src:V023	anosmia	no sense of smell	
+src:V024	RBD	dream enactment / RBD, pt or partner reported	
+src:V025	constip	<3 BMs/week or laxative use	
+src:V026	OH	orthostatic hypotension (drop >=20/10)	
+src:V027	urg	urinary urgency	
+src:V028	dep (clin dx)	depression, clinician judged	
+src:V029	VH	visual hallucinations last month	
+src:V030	MCI	PD-MCI (Level II criteria)	
+src:V031	LID	levodopa-induced dyskinesia	
+src:V032	dysphag	difficulty swallowing	
+src:V033	UPDRS1_TOT	MDS UPDRS part I total	score
+src:V034	UPDRS2_TOT	MDS UPDRS part II total	score
+src:V035	UPDRS3 tot OFF	MDS-UPDRS III motor exam total, practically defined OFF	score
+src:V036	UPDRS3 tot ON	MDS-UPDRS III motor exam total, ON medication	score
+src:V037	UPDRS4_TOT	MDS UPDRS part IV total (motor complications)	score
+src:V038	HY stage	Hoehn & Yahr (0-5), rated in MDS-UPDRS III	
+src:V039	MOCA_TOT	MoCA total /30	score
+src:V040	GDS15	geriatric depression scale short form total	score
+src:V041	ESS_total	Epworth sleepiness total 0-24	score
+src:V042	SCOPA-AUT tot	SCOPA-AUT total score	score
+src:V043	S&E ADL %	Schwab & England ADL, % independence	%
+src:V044	UPSIT	smell ID test, 40 items, total correct	count
+src:V045	RBDSQ	RBD screening questionnaire score	score
+src:V046	aSyn SAA (CSF)	alpha-syn seed amplification result pos/neg/indet	
+src:V047	SAA_Fmax	max ThT fluorescence, SAA run	RFU
+src:V048	CSF a-syn total	total alpha-synuclein, ELISA	pg/ml
+src:V049	ABETA42_CSF	amyloid beta 1-42 in CSF	pg/mL
+src:V050	tTau CSF	total tau, CSF	pg/mL
+src:V051	pTau181 CSF	phospho-tau 181, CSF immunoassay	pg/mL
+src:V052	sNfL	serum NfL, Simoa	pg/ml
+src:V053	pNfL_molar	plasma neurofilament light	pmol/L
+src:V054	NfL CSF	neurofilament light chain, CSF	ng/L
+src:V055	GPNMB_SOMA	plasma GPNMB, SomaScan 7k	RFU
+src:V056	GPNMB olink	plasma GPNMB, Olink Explore	NPX
+src:V057	CTSB NPX	cathepsin B, Explore 3072	NPX
+src:V058	hsCRP	high-sensitivity CRP, serum	mg/L
+src:V059	urate	serum uric acid	umol/L
+src:V060	HbA1c	glycated haemoglobin	%
+src:V061	CSF_RBC	red cells in CSF (blood contamination)	/uL
+src:V062	fasting	fasted >8h before draw y/n	
+src:V063	ft_cycles	no. freeze-thaw cycles before assay	count
+src:V064	DaT_SBR_putL	DaT-SPECT specific binding ratio, left putamen	ratio
+src:V065	DaT_SBR_caudR	DaT-SPECT specific binding ratio, right caudate	ratio
+src:V066	plate_id	assay plate / batch	
+src:V067	LEDD	levodopa equivalent daily dose	mg/day
+src:V068	med_state_exam	ON/OFF at time of motor exam	

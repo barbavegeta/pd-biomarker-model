@@ -67,6 +67,7 @@ nav:
   - Home: index.md
   - Model diagram: diagram.md
   - Schema reference: elements/index.md
+  - Curation guidelines: curation-guidelines.md
   - Changelog: changelog.md
   - About: about.md
 
