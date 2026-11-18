@@ -1,0 +1,18 @@
+# Changes here will be overwritten by Copier
+_commit: v0.5.0
+_src_path: gh:linkml/linkml-project-copier
+add_example: true
+copyright_year: '2026'
+email: ''
+existing_license_file: ''
+full_name: Salvatore Barbagallo
+gh_action_docs_preview: false
+gh_action_pypi: false
+github_org: barbavegeta
+license: MIT
+project_description: LinkML data model for Parkinson's disease phenotypes and biomarkers,
+    with ontology-bound value sets, validation and AI-assisted SSSOM mapping on synthetic
+    data
+project_name: pd-biomarker-model
+project_slug: pd_biomarker_model
+

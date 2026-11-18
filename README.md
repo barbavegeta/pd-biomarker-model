@@ -1,0 +1,34 @@
+<a href="https://github.com/linkml/linkml-project-copier"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json" alt="Copier Badge" style="max-width:100%;"/></a>
+
+# pd-biomarker-model
+
+LinkML data model for Parkinson's disease phenotypes and biomarkers, with ontology-bound value sets, validation and AI-assisted SSSOM mapping on synthetic data
+
+## Documentation Website
+
+[https://barbavegeta.github.io/pd-biomarker-model](https://barbavegeta.github.io/pd-biomarker-model)
+
+## Repository Structure
+
+* [docs/](docs/) - mkdocs-managed documentation
+  * [elements/](docs/elements/) - generated schema documentation
+* [examples/](examples/) - Examples of using the schema
+* [project/](project/) - project files (these files are auto-generated, do not edit)
+* [src/](src/) - source files (edit these)
+  * [pd_biomarker_model](src/pd_biomarker_model)
+    * [schema/](src/pd_biomarker_model/schema) -- LinkML schema
+      (edit this)
+    * [datamodel/](src/pd_biomarker_model/datamodel) -- generated
+      Python datamodel
+* [tests/](tests/) - Python tests
+  * [data/](tests/data) - Example data
+
+## Developer Tools
+
+There are several pre-defined command-recipes available.
+They are written for the command runner [just](https://github.com/casey/just/).
+To list all pre-defined commands, run `just` or `just --list`.
+
+## Credits
+
+This project uses the template [linkml-project-copier](https://github.com/linkml/linkml-project-copier).

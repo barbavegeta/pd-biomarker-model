@@ -1,0 +1,83 @@
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pd_biomarker_model"
+description = "LinkML data model for Parkinson's disease phenotypes and biomarkers, with ontology-bound value sets, validation and AI-assisted SSSOM mapping on synthetic data"
+authors = [
+  {name = "Salvatore Barbagallo"},
+]
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["version"]
+
+dependencies = [
+  "linkml-runtime==1.12.1",
+]
+
+[dependency-groups]
+dev = [
+    "linkml==1.12.1",
+    "mkdocs-material==9.8.1",
+    "mkdocs-mermaid2-plugin==1.2.3",
+    "mkdocs-pymdownx-material-extras==2.8",
+    "jupyter==1.1.1",
+    "mknotebooks==0.8.0",
+    "pytest==9.2.0",
+]
+
+# See https://hatch.pypa.io/latest/config/build/#file-selection for how to
+# explicitly include files other than default into the build distributions.
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+# Ref.: https://github.com/ninoseki/uv-dynamic-versioning/
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+fallback-version = "0.0.0"
+
+# Ref.: https://docs.pytest.org/en/stable/reference/reference.html#configuration-options
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# https://docs.astral.sh/ruff/configuration/
+[tool.ruff]
+exclude = [
+    "src/pd_biomarker_model/_version.py",
+]
+# Set oldest supported Python version
+target-version = "py311"
+
+# Ref.: https://github.com/codespell-project/codespell
+[tool.codespell]
+skip = [
+  "LICENSE",
+  "pyproject.toml",
+  "uv.lock",
+  "project/*",
+  "src/pd_biomarker_model/datamodel/pd_biomarker_model_pydantic.py",
+  "src/pd_biomarker_model/datamodel/pd_biomarker_model.py",
+]
+
+# Reminder: words have to be lowercased for the ignore-words-list
+ignore-words-list = "linke"
+quiet-level = 3
+
+# Ref.: https://github.com/crate-ci/typos (spell checker)
+[tool.typos.default.extend-words]
+linke = "linke"
+
+[tool.typos.files]
+extend-exclude = [
+  "LICENSE",
+  "uv.lock",
+  "pyproject.toml",
+  "project/*",
+  "src/pd_biomarker_model/datamodel/pd_biomarker_model_pydantic.py",
+  "src/pd_biomarker_model/datamodel/pd_biomarker_model.py",
+]
