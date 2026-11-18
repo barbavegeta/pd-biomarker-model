@@ -1,0 +1,14 @@
+# Configuration for `linkml-validate --config validation.yaml <data files>`.
+# Structural checks come from the JSON Schema; ontology and cross-record
+# checks come from the plugins in src/pd_biomarker_model/validation.py.
+schema: src/pd_biomarker_model/schema/pd_biomarker_model.yaml
+target_class: ParkinsonsStudyDataset
+
+plugins:
+  JsonschemaValidationPlugin:
+    closed: true
+  pd_biomarker_model.validation.DatasetDynamicEnumPlugin:
+    cache_dir: ontology_cache
+    oak_config_path: ontology_cache/oak_config.yaml
+    offline: true
+  pd_biomarker_model.validation.CrossRecordPlugin: {}

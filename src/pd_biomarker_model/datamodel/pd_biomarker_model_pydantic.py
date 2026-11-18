@@ -160,14 +160,24 @@ class DiseaseEnum(str):
     """
     Any disease in MONDO.
     """
-    pass
+
+    @classmethod
+    def __get_pydantic_core_schema__(cls, source_type: Any, handler: Any) -> Any:
+        from pydantic_core import core_schema
+
+        return core_schema.no_info_after_validator_function(cls, core_schema.str_schema())
 
 
 class PhenotypeEnum(str):
     """
     Any phenotypic abnormality in HPO.
     """
-    pass
+
+    @classmethod
+    def __get_pydantic_core_schema__(cls, source_type: Any, handler: Any) -> Any:
+        from pydantic_core import core_schema
+
+        return core_schema.no_info_after_validator_function(cls, core_schema.str_schema())
 
 
 class SpecimenTypeEnum(str, Enum):
@@ -200,7 +210,12 @@ class BrainRegionEnum(str):
     """
     Any part of the brain in UBERON.
     """
-    pass
+
+    @classmethod
+    def __get_pydantic_core_schema__(cls, source_type: Any, handler: Any) -> Any:
+        from pydantic_core import core_schema
+
+        return core_schema.no_info_after_validator_function(cls, core_schema.str_schema())
 
 
 class LateralityEnum(str, Enum):
@@ -379,7 +394,12 @@ class ParkinsonianDisorderEnum(str):
     """
     Parkinson disease and the atypical parkinsonian disorders it is most often distinguished from. MONDO files multiple system atrophy and Lewy body dementia under synucleinopathy, and progressive supranuclear palsy under movement disorder, rather than under parkinsonian disorder, so each is listed as its own root.
     """
-    pass
+
+    @classmethod
+    def __get_pydantic_core_schema__(cls, source_type: Any, handler: Any) -> Any:
+        from pydantic_core import core_schema
+
+        return core_schema.no_info_after_validator_function(cls, core_schema.str_schema())
 
 
 class ParkinsonsInstrumentEnum(str, Enum):

@@ -1,0 +1,66 @@
+# Breaks: Symptom onset cannot follow diagnosis.
+# Expect: is after age_at_diagnosis
+id: pdbm:DS0001
+title: Minimal synthetic dataset
+description: Synthetic records generated for testing and documentation. No real participants.
+dataset_version: 1.0.0
+license: https://creativecommons.org/publicdomain/zero/1.0/
+created_on: '2026-11-18'
+conforms_to: https://w3id.org/pd-biomarker-model/0.1.0
+is_synthetic: true
+participants:
+- id: pdbm:P0001
+  cohort: CASE
+  sex: FEMALE
+  year_of_birth: 1956
+  enrolment_date: '2024-03-04'
+visits:
+- id: pdbm:V0001
+  participant: pdbm:P0001
+  visit_code: M00
+  visit_date: '2024-03-04'
+diagnoses:
+- id: pdbm:D0001
+  participant: pdbm:P0001
+  condition: MONDO:0005180
+  diagnostic_criteria: MDS_PD_2015
+  diagnostic_certainty: CLINICALLY_ESTABLISHED
+  age_at_symptom_onset: 67.0
+  age_at_diagnosis: 66.0
+phenotype_observations:
+- id: pdbm:O0001
+  visit: pdbm:V0001
+  phenotype: HP:0002067
+clinical_assessments:
+- id: pdbm:A0001
+  visit: pdbm:V0001
+  instrument: MDS_UPDRS_PART_III
+  score: 24.0
+  medication_state: 'OFF'
+specimens:
+- id: pdbm:S0001
+  visit: pdbm:V0001
+  specimen_type: CSF
+  freeze_thaw_cycles: 1
+analytes:
+- id: UniProtKB:P37840
+  label: alpha-synuclein
+  gene_symbol: SNCA
+  hgnc_id: HGNC:11138
+assays:
+- id: pdbm:AS0001
+  label: CSF alpha-synuclein seed amplification assay
+  technology: SEED_AMPLIFICATION_ASSAY
+biomarker_measurements:
+- id: pdbm:M0001
+  visit: pdbm:V0001
+  specimen: pdbm:S0001
+  assay: pdbm:AS0001
+  analyte: UniProtKB:P37840
+  modality: SPECIMEN
+  measurement_type: CATEGORICAL
+  categorical_result: POSITIVE
+  source: synthetic-lab-export-2026-11
+  curation_date: '2026-11-18'
+  curator: ORCID:0000-0002-1825-0097
+  curator_type: PERSON

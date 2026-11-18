@@ -1,0 +1,14 @@
+# Ontology adapters used to check terms. Each prefix is read from a local
+# semantic-sql database (downloaded by oaklib on first use). LOINC and PROV
+# are not available through oaklib, so they are reported as unknown prefixes
+# and skipped.
+ontology_adapters:
+  MONDO: sqlite:obo:mondo
+  HP: sqlite:obo:hp
+  UBERON: sqlite:obo:uberon
+  OBI: sqlite:obo:obi
+  PATO: sqlite:obo:pato
+  NCIT: sqlite:obo:ncit
+  PRIDE: sqlite:obo:pride
+  UO: sqlite:obo:uo
+  STATO: sqlite:obo:stato

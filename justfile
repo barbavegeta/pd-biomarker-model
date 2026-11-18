@@ -113,7 +113,7 @@ deploy: site
 
 # Run all tests
 [group('model development')]
-test: _test-schema _test-python _test-examples
+test: _test-schema _test-python validate-examples
 
 # Run linting
 [group('model development')]
@@ -226,8 +226,8 @@ _test-examples: _ensure_examples_output
     --input-formats yaml \
     --output-formats json \
     --output-formats yaml \
-    --counter-example-input-directory tests/data/invalid \
-    --input-directory tests/data/valid \
+    --counter-example-input-directory examples/invalid \
+    --input-directory examples/valid \
     --output-directory examples/output \
     --schema {{source_schema_path}} > examples/output/README.md
 

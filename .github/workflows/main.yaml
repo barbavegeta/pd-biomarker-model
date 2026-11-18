@@ -84,5 +84,11 @@ jobs:
       - name: Install project
         run: uv sync --group dev
 
-      - name: Generated artifacts match the schema
+      - name: Lint the schema
+        run: just lint
+
+      - name: Ontology terms are current (offline, committed cache)
+        run: just check-terms
+
+      - name: Generated artifacts and examples match the schema
         run: just check-artifacts

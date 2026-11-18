@@ -144,3 +144,6 @@ dmypy.json
 .idea
 # Local vscode editor config
 .vscode
+
+# lock files written by linkml-term-validator
+/ontology_cache/**/*.lock
