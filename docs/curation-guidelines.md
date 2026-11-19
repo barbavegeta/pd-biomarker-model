@@ -12,6 +12,10 @@ A yes/no variable for "masked face" records the phenotype *Hypomimic face*;
 a variable holding a plasma GFAP concentration records the laboratory test
 for GFAP mass concentration in plasma.
 
+A variable that holds codes or names identifying something records its
+identifier: a column of laboratory codes maps to the laboratory's
+identifier, not to the laboratory.
+
 Read the name, the description and the unit together. Abbreviations are
 resolved from the description and unit, never from the name alone (*MS*
 may be multiple sclerosis or mass spectrometry; *PE* may be pulmonary
@@ -21,7 +25,10 @@ embolism or a physical examination).
 
 Use the first vocabulary that applies:
 
-1. **Diagnoses** (a disease present or absent): MONDO.
+1. **Diagnoses** (a disease present or absent): MONDO. Diagnoses are the
+   conditions participants are enrolled or classified by. Another
+   condition recorded as present or absent, even one a clinician judged
+   (anxiety in a Parkinson's cohort), is a sign or symptom.
 2. **Signs and symptoms**: HPO, even when a disease of the same name exists
    in MONDO.
 3. **Laboratory tests**: LOINC. The code must agree with the variable on
@@ -42,7 +49,9 @@ Only current terms are used; obsolete terms are replaced by their successor.
 ## Predicates
 
 - `skos:exactMatch`: the term means the same as the variable, including
-  specimen, property and instrument version.
+  specimen, property and instrument version. Naming the study's disease as
+  context does not narrow a generic term: the date of diagnosis of the
+  study's disease is an exact match to a generic diagnosis-date term.
 - `skos:broadMatch`: the term is more general than the variable (a
   questionnaire for one of its total scores; *Tremor* for a variable that
   records only jaw tremor).
