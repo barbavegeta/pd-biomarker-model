@@ -47,7 +47,7 @@
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
     dcterms:title "SpecimenTypeEnum"@en ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.2.0" ;
     skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/CSF>,
         <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/PLASMA>,
         <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/SERUM>,

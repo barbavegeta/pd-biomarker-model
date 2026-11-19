@@ -24,7 +24,7 @@ artifact_dir := "artifacts"
 gen-artifacts: gen-python gen-diagram gen-examples gen-vocabularies
   mkdir -p {{artifact_dir}}/jsonschema {{artifact_dir}}/sql
   uv run gen-json-schema --no-metadata {{source_schema_path}} > {{artifact_dir}}/jsonschema/{{schema_name}}.schema.json
-  uv run gen-sqltables --no-metadata --generate_abstract_class_ddl false {{source_schema_path}} > {{artifact_dir}}/sql/{{schema_name}}.sql
+  uv run python scripts/gen_sql.py {{source_schema_path}} > {{artifact_dir}}/sql/{{schema_name}}.sql
 
 # Fail if any committed artifact differs from what the schema generates
 [group('model development')]

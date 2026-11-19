@@ -59,7 +59,7 @@ from linkml_runtime.linkml_model.types import Boolean, Date, Float, Integer, Str
 from linkml_runtime.utils.metamodelcore import Bool, URI, URIorCURIE, XSDDate
 
 metamodel_version = "1.12.0"
-version = "0.1.0"
+version = "0.2.0"
 
 # Namespaces
 BFO = CurieNamespace('BFO', 'http://purl.obolibrary.org/obo/BFO_')
@@ -173,6 +173,7 @@ class NamedThing(YAMLRoot):
 class StudyDataset(NamedThing):
     """
     A versioned collection of cohort records with dataset-level metadata. Records refer to each other by identifier.
+    Disease modules subclass this and narrow the ranges of its record lists.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -200,11 +201,6 @@ class StudyDataset(NamedThing):
     biomarker_measurements: Optional[Union[dict[Union[str, BiomarkerMeasurementId], Union[dict, "BiomarkerMeasurement"]], list[Union[dict, "BiomarkerMeasurement"]]]] = empty_dict()
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, StudyDatasetId):
-            self.id = StudyDatasetId(self.id)
-
         if self._is_empty(self.title):
             self.MissingRequiredField("title")
         if not isinstance(self.title, str):
@@ -381,7 +377,8 @@ class Visit(NamedThing):
 @dataclass(repr=False)
 class Diagnosis(NamedThing):
     """
-    A clinical diagnosis recorded for a participant.
+    A clinical diagnosis recorded for a participant. Disease modules subclass this and bind the condition to their own
+    value set.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -397,11 +394,6 @@ class Diagnosis(NamedThing):
     age_at_diagnosis: Optional[float] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, DiagnosisId):
-            self.id = DiagnosisId(self.id)
-
         if self._is_empty(self.participant):
             self.MissingRequiredField("participant")
         if not isinstance(self.participant, ParticipantId):

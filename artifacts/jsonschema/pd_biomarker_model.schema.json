@@ -521,7 +521,7 @@
         },
         "Diagnosis": {
             "additionalProperties": false,
-            "description": "A clinical diagnosis recorded for a participant.",
+            "description": "A clinical diagnosis recorded for a participant. Disease modules subclass this and bind the condition to their own value set.",
             "properties": {
                 "age_at_diagnosis": {
                     "description": "Age in years when the condition was diagnosed.",
@@ -1263,7 +1263,7 @@
         },
         "StudyDataset": {
             "additionalProperties": false,
-            "description": "A versioned collection of cohort records with dataset-level metadata. Records refer to each other by identifier.",
+            "description": "A versioned collection of cohort records with dataset-level metadata. Records refer to each other by identifier. Disease modules subclass this and narrow the ranges of its record lists.",
             "properties": {
                 "analytes": {
                     "description": "Analytes measured in the dataset.",
@@ -1602,6 +1602,6 @@
     ],
     "title": "pd_biomarker_model",
     "type": "object",
-    "version": "0.1.0"
+    "version": "0.2.0"
 }
 

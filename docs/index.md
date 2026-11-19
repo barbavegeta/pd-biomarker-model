@@ -12,7 +12,9 @@ The model has two layers.
 
 - **Core** (`core.yaml`): a disease-agnostic model of a cohort study. A
   `StudyDataset` holds flat lists of records that refer to each other by
-  identifier, so each class maps to one table.
+  identifier, so each class maps to one table. The dataset, diagnosis and
+  clinical assessment classes are abstract: a disease module subclasses
+  them to bind its own value sets.
 - **Parkinson's module** (`pd_biomarker_model.yaml`): imports the core and
   narrows it. `ParkinsonsDiagnosis` restricts the condition to parkinsonian
   disorders and adds diagnostic criteria; `ParkinsonsClinicalAssessment`

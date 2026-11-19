@@ -6,7 +6,7 @@ description: >-
   diagnoses, phenotypes, clinical assessments, specimens and biomarker
   measurements with provenance. Disease modules import this schema and
   narrow its value sets and rules.
-version: 0.1.0
+version: 0.2.0
 license: MIT
 see_also:
   - https://barbavegeta.github.io/pd-biomarker-model
@@ -54,9 +54,11 @@ classes:
 
   StudyDataset:
     is_a: NamedThing
+    abstract: true
     description: >-
       A versioned collection of cohort records with dataset-level metadata.
-      Records refer to each other by identifier.
+      Records refer to each other by identifier. Disease modules subclass
+      this and narrow the ranges of its record lists.
     class_uri: schema:Dataset
     slots:
       - title
@@ -96,7 +98,10 @@ classes:
 
   Diagnosis:
     is_a: NamedThing
-    description: A clinical diagnosis recorded for a participant.
+    abstract: true
+    description: >-
+      A clinical diagnosis recorded for a participant. Disease modules
+      subclass this and bind the condition to their own value set.
     slots:
       - participant
       - condition

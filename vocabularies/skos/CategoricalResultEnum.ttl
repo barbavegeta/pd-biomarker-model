@@ -31,7 +31,7 @@
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
     dcterms:title "CategoricalResultEnum"@en ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.2.0" ;
     skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/INDETERMINATE>,
         <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/NEGATIVE>,
         <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/POSITIVE> ;

@@ -6,7 +6,7 @@ description: Synthetic records generated for testing and documentation. No real 
 dataset_version: 1.0.0
 license: https://creativecommons.org/publicdomain/zero/1.0/
 created_on: '2026-11-18'
-conforms_to: https://w3id.org/pd-biomarker-model/0.1.0
+conforms_to: https://w3id.org/pd-biomarker-model/0.2.0
 is_synthetic: true
 participants:
 - id: pdbm:P0001

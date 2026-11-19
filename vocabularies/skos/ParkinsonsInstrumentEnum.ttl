@@ -57,7 +57,7 @@
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model> ;
     dcterms:title "ParkinsonsInstrumentEnum"@en ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.2.0" ;
     skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/HOEHN_YAHR>,
         <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_I>,
         <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_II>,

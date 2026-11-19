@@ -30,7 +30,7 @@ from pydantic import (
 
 
 metamodel_version = "1.12.0"
-version = "0.1.0"
+version = "0.2.0"
 
 
 class ConfiguredBaseModel(BaseModel):
@@ -521,9 +521,10 @@ class NamedThing(ConfiguredBaseModel):
 
 class StudyDataset(NamedThing):
     """
-    A versioned collection of cohort records with dataset-level metadata. Records refer to each other by identifier.
+    A versioned collection of cohort records with dataset-level metadata. Records refer to each other by identifier. Disease modules subclass this and narrow the ranges of its record lists.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'schema:Dataset',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'class_uri': 'schema:Dataset',
          'from_schema': 'https://w3id.org/pd-biomarker-model/core'})
 
     title: str = Field(default=..., description="""Human-readable title of the dataset.""", json_schema_extra = { "linkml_meta": {'domain_of': ['StudyDataset'], 'slot_uri': 'dcterms:title'} })
@@ -638,9 +639,9 @@ class Visit(NamedThing):
 
 class Diagnosis(NamedThing):
     """
-    A clinical diagnosis recorded for a participant.
+    A clinical diagnosis recorded for a participant. Disease modules subclass this and bind the condition to their own value set.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/pd-biomarker-model/core'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True, 'from_schema': 'https://w3id.org/pd-biomarker-model/core'})
 
     participant: str = Field(default=..., description="""The participant this record belongs to.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Visit', 'Diagnosis']} })
     condition: DiseaseEnum = Field(default=..., description="""Diagnosed condition, as a MONDO term.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Diagnosis']} })

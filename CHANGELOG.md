@@ -11,6 +11,18 @@ uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html):
   permissible values)
 - **patch**: documentation, descriptions or mappings only
 
+Before 1.0.0, a change that would need a major version increases the minor
+version instead.
+
+## [0.2.0] - 2026-11-19
+
+### Changed
+
+- `StudyDataset` and `Diagnosis` in the core are abstract, like
+  `ClinicalAssessment`. Data uses the disease module's classes
+  (`ParkinsonsStudyDataset`, `ParkinsonsDiagnosis`), and the generated SQL
+  has no tables for the core classes.
+
 ## [0.1.0] - 2026-11-18
 
 ### Added

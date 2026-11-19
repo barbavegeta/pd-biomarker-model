@@ -28,6 +28,9 @@ VALID = ROOT / "examples" / "valid"
 INVALID = ROOT / "examples" / "invalid"
 
 TODAY = "2026-11-18"
+SCHEMA_VERSION = yaml.safe_load(
+    (ROOT / "src" / "pd_biomarker_model" / "schema" / "pd_biomarker_model.yaml").read_text()
+)["version"]
 CURATOR = "ORCID:0000-0002-1825-0097"  # ORCID's documented example iD
 AGENT = "pdbm:agent/harmonisation-agent-v1"
 
@@ -84,7 +87,7 @@ def header(title: str, version: str = "1.0.0") -> dict:
         "dataset_version": version,
         "license": "https://creativecommons.org/publicdomain/zero/1.0/",
         "created_on": TODAY,
-        "conforms_to": "https://w3id.org/pd-biomarker-model/0.1.0",
+        "conforms_to": f"https://w3id.org/pd-biomarker-model/{SCHEMA_VERSION}",
         "is_synthetic": True,
     }
 
