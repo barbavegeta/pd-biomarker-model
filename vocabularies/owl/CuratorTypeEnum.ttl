@@ -1,0 +1,54 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:broadMatch a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:narrowMatch a owl:AnnotationProperty .
+
+skos:notation a owl:AnnotationProperty .
+
+skos:relatedMatch a owl:AnnotationProperty .
+
+<https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum.owl> a owl:Ontology ;
+    dcterms:description "Kind of agent that curated a record."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "CuratorTypeEnum"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum/AI_AGENT> a owl:Class ;
+    rdfs:label "SoftwareAgent"@en ;
+    obo:IAO_0000115 "An AI agent, such as an LLM-based curation tool."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum> ;
+    skos:exactMatch prov:SoftwareAgent ;
+    skos:notation "AI_AGENT" .
+
+<https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum/PERSON> a owl:Class ;
+    rdfs:label "Person"@en ;
+    obo:IAO_0000115 "A human curator."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum> ;
+    skos:exactMatch prov:Person ;
+    skos:notation "PERSON" .
+
+<https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum> a owl:Class ;
+    rdfs:label "CuratorTypeEnum"@en ;
+    obo:IAO_0000115 "Kind of agent that curated a record."@en .
+

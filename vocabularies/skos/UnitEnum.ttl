@@ -1,0 +1,56 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/UnitEnum/%7BNPX%7D> a skos:Concept ;
+    skos:definition "Olink normalised protein expression, an arbitrary log2 unit."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> ;
+    skos:notation "{NPX}" ;
+    skos:prefLabel "{NPX}"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/UnitEnum/%7BRFU%7D> a skos:Concept ;
+    skos:definition "SomaScan relative fluorescence units."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C77535> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> ;
+    skos:notation "{RFU}" ;
+    skos:prefLabel "Relative Fluorescence Intensity Unit"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/UnitEnum/1> a skos:Concept ;
+    skos:definition "Dimensionless (UCUM unity), used for ratios."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/UO_0000186> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> ;
+    skos:notation "1" ;
+    skos:prefLabel "dimensionless unit"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/UnitEnum/ng%2FmL> a skos:Concept ;
+    skos:definition "Nanograms per millilitre."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/UO_0000275> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> ;
+    skos:notation "ng/mL" ;
+    skos:prefLabel "nanogram per milliliter"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/UnitEnum/pg%2FmL> a skos:Concept ;
+    skos:definition "Picograms per millilitre."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/UO_0010070> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> ;
+    skos:notation "pg/mL" ;
+    skos:prefLabel "picogram per milliliter"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/UnitEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/UnitEnum> a skos:ConceptScheme ;
+    dcterms:description "Units as case-sensitive UCUM codes. Curly-brace codes are UCUM annotations for arbitrary, platform-specific units."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "UnitEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/UnitEnum/%7BNPX%7D>,
+        <https://w3id.org/pd-biomarker-model/vocab/UnitEnum/%7BRFU%7D>,
+        <https://w3id.org/pd-biomarker-model/vocab/UnitEnum/1>,
+        <https://w3id.org/pd-biomarker-model/vocab/UnitEnum/ng%2FmL>,
+        <https://w3id.org/pd-biomarker-model/vocab/UnitEnum/pg%2FmL> ;
+    skos:prefLabel "UnitEnum"@en .
+

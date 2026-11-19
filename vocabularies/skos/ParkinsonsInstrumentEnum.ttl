@@ -1,0 +1,68 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/HOEHN_YAHR> a skos:Concept ;
+    skos:definition "Hoehn and Yahr stage as rated in MDS-UPDRS, 0-5."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C100535> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:notation "HOEHN_YAHR" ;
+    skos:prefLabel "MDS-UPDRS - Hoehn and Yahr Stage"@en ;
+    skos:relatedMatch <https://loinc.org/77714-4> ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_I> a skos:Concept ;
+    skos:broadMatch <http://purl.obolibrary.org/obo/NCIT_C100769> ;
+    skos:definition "MDS-UPDRS Part I (non-motor experiences of daily living) total, 0-52."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:notation "MDS_UPDRS_PART_I" ;
+    skos:prefLabel "MDS_UPDRS_PART_I"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_II> a skos:Concept ;
+    skos:broadMatch <http://purl.obolibrary.org/obo/NCIT_C100769> ;
+    skos:definition "MDS-UPDRS Part II (motor experiences of daily living) total, 0-52."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:notation "MDS_UPDRS_PART_II" ;
+    skos:prefLabel "MDS_UPDRS_PART_II"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_III> a skos:Concept ;
+    skos:broadMatch <http://purl.obolibrary.org/obo/NCIT_C100769> ;
+    skos:definition "MDS-UPDRS Part III (motor examination) total, 0-132."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:notation "MDS_UPDRS_PART_III" ;
+    skos:prefLabel "MDS_UPDRS_PART_III"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_IV> a skos:Concept ;
+    skos:broadMatch <http://purl.obolibrary.org/obo/NCIT_C100769> ;
+    skos:definition "MDS-UPDRS Part IV (motor complications) total, 0-24."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:notation "MDS_UPDRS_PART_IV" ;
+    skos:prefLabel "MDS_UPDRS_PART_IV"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MOCA> a skos:Concept ;
+    skos:closeMatch <http://purl.obolibrary.org/obo/NCIT_C162720> ;
+    skos:definition "Montreal Cognitive Assessment total score, 0-30."@en ;
+    skos:exactMatch <https://loinc.org/72172-0> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:notation "MOCA" ;
+    skos:prefLabel "Total score [MoCA]"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> a skos:ConceptScheme ;
+    dcterms:description "Rating scale totals recorded in Parkinson's studies. LOINC covers the MoCA total but not MDS-UPDRS: its UPDRS codes describe the original 1987 scale, which has different items and ranges."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model> ;
+    dcterms:title "ParkinsonsInstrumentEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/HOEHN_YAHR>,
+        <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_I>,
+        <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_II>,
+        <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_III>,
+        <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_IV>,
+        <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MOCA> ;
+    skos:prefLabel "ParkinsonsInstrumentEnum"@en .
+

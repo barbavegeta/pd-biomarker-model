@@ -1,0 +1,60 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:broadMatch a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:narrowMatch a owl:AnnotationProperty .
+
+skos:notation a owl:AnnotationProperty .
+
+skos:relatedMatch a owl:AnnotationProperty .
+
+<https://w3id.org/pd-biomarker-model/vocab/CohortEnum.owl> a owl:Ontology ;
+    dcterms:description "Study arm a participant was enrolled in."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "CohortEnum"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/pd-biomarker-model/vocab/CohortEnum/CASE> a owl:Class ;
+    rdfs:label "Participant Case"@en ;
+    obo:IAO_0000115 "Enrolled because they have the condition under study."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/CohortEnum> ;
+    skos:exactMatch obo:NCIT_C216103 ;
+    skos:notation "CASE" .
+
+<https://w3id.org/pd-biomarker-model/vocab/CohortEnum/HEALTHY_CONTROL> a owl:Class ;
+    rdfs:label "Healthy Control"@en ;
+    obo:IAO_0000115 "Enrolled as a healthy comparison participant."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/CohortEnum> ;
+    skos:exactMatch obo:NCIT_C94342 ;
+    skos:notation "HEALTHY_CONTROL" .
+
+<https://w3id.org/pd-biomarker-model/vocab/CohortEnum/PRODROMAL> a owl:Class ;
+    rdfs:label "Prodromal Phase of Disease"@en ;
+    obo:IAO_0000115 "Enrolled with prodromal features but no diagnosis."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/CohortEnum> ;
+    skos:exactMatch obo:NCIT_C209884 ;
+    skos:notation "PRODROMAL" .
+
+<https://w3id.org/pd-biomarker-model/vocab/CohortEnum> a owl:Class ;
+    rdfs:label "CohortEnum"@en ;
+    obo:IAO_0000115 "Study arm a participant was enrolled in."@en .
+

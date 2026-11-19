@@ -1,0 +1,60 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:broadMatch a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:narrowMatch a owl:AnnotationProperty .
+
+skos:notation a owl:AnnotationProperty .
+
+skos:relatedMatch a owl:AnnotationProperty .
+
+<https://w3id.org/pd-biomarker-model/vocab/LateralityEnum.owl> a owl:Ontology ;
+    dcterms:description "Side of the body."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "LateralityEnum"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/BILATERAL> a owl:Class ;
+    rdfs:label "bilateral"@en ;
+    obo:IAO_0000115 "Both sides, reported as the mean of left and right."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> ;
+    skos:exactMatch obo:PATO_0000618 ;
+    skos:notation "BILATERAL" .
+
+<https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/LEFT> a owl:Class ;
+    rdfs:label "left"@en ;
+    obo:IAO_0000115 "Left side."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> ;
+    skos:exactMatch obo:PATO_0000366 ;
+    skos:notation "LEFT" .
+
+<https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/RIGHT> a owl:Class ;
+    rdfs:label "right"@en ;
+    obo:IAO_0000115 "Right side."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> ;
+    skos:exactMatch obo:PATO_0000367 ;
+    skos:notation "RIGHT" .
+
+<https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> a owl:Class ;
+    rdfs:label "LateralityEnum"@en ;
+    obo:IAO_0000115 "Side of the body."@en .
+

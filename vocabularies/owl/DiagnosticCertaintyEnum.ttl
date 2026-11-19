@@ -1,0 +1,57 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:broadMatch a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:narrowMatch a owl:AnnotationProperty .
+
+skos:notation a owl:AnnotationProperty .
+
+skos:relatedMatch a owl:AnnotationProperty .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum.owl> a owl:Ontology ;
+    dcterms:description "Level of diagnostic certainty defined by the criteria."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model> ;
+    dcterms:title "DiagnosticCertaintyEnum"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/CLINICALLY_ESTABLISHED> a owl:Class ;
+    rdfs:label "CLINICALLY_ESTABLISHED"@en ;
+    obo:IAO_0000115 "Clinically established (MDS PD and MSA criteria)."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> ;
+    skos:notation "CLINICALLY_ESTABLISHED" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/POSSIBLE> a owl:Class ;
+    rdfs:label "POSSIBLE"@en ;
+    obo:IAO_0000115 "Possible (PSP and DLB criteria)."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> ;
+    skos:notation "POSSIBLE" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/PROBABLE> a owl:Class ;
+    rdfs:label "PROBABLE"@en ;
+    obo:IAO_0000115 "Probable."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> ;
+    skos:notation "PROBABLE" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> a owl:Class ;
+    rdfs:label "DiagnosticCertaintyEnum"@en ;
+    obo:IAO_0000115 "Level of diagnostic certainty defined by the criteria."@en .
+

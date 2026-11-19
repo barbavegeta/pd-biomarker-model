@@ -1,0 +1,36 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum/OFF> a skos:Concept ;
+    skos:definition "Examined after withholding dopaminergic medication."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum> ;
+    skos:notation "OFF" ;
+    skos:prefLabel "OFF"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum/ON> a skos:Concept ;
+    skos:definition "Examined while responding to dopaminergic medication."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum> ;
+    skos:notation "ON" ;
+    skos:prefLabel "ON"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum/UNTREATED> a skos:Concept ;
+    skos:definition "Not yet taking dopaminergic medication."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum> ;
+    skos:notation "UNTREATED" ;
+    skos:prefLabel "UNTREATED"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum> a skos:ConceptScheme ;
+    dcterms:description "Dopaminergic medication state during a motor examination."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model> ;
+    dcterms:title "MedicationStateEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum/OFF>,
+        <https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum/ON>,
+        <https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum/UNTREATED> ;
+    skos:prefLabel "MedicationStateEnum"@en .
+

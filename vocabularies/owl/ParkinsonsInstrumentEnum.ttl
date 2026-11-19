@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:broadMatch a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:narrowMatch a owl:AnnotationProperty .
+
+skos:notation a owl:AnnotationProperty .
+
+skos:relatedMatch a owl:AnnotationProperty .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum.owl> a owl:Ontology ;
+    dcterms:description "Rating scale totals recorded in Parkinson's studies. LOINC covers the MoCA total but not MDS-UPDRS: its UPDRS codes describe the original 1987 scale, which has different items and ranges."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model> ;
+    dcterms:title "ParkinsonsInstrumentEnum"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/HOEHN_YAHR> a owl:Class ;
+    rdfs:label "MDS-UPDRS - Hoehn and Yahr Stage"@en ;
+    obo:IAO_0000115 "Hoehn and Yahr stage as rated in MDS-UPDRS, 0-5."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:exactMatch obo:NCIT_C100535 ;
+    skos:notation "HOEHN_YAHR" ;
+    skos:relatedMatch <https://loinc.org/77714-4> .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_I> a owl:Class ;
+    rdfs:label "MDS_UPDRS_PART_I"@en ;
+    obo:IAO_0000115 "MDS-UPDRS Part I (non-motor experiences of daily living) total, 0-52."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:broadMatch obo:NCIT_C100769 ;
+    skos:notation "MDS_UPDRS_PART_I" .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_II> a owl:Class ;
+    rdfs:label "MDS_UPDRS_PART_II"@en ;
+    obo:IAO_0000115 "MDS-UPDRS Part II (motor experiences of daily living) total, 0-52."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:broadMatch obo:NCIT_C100769 ;
+    skos:notation "MDS_UPDRS_PART_II" .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_III> a owl:Class ;
+    rdfs:label "MDS_UPDRS_PART_III"@en ;
+    obo:IAO_0000115 "MDS-UPDRS Part III (motor examination) total, 0-132."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:broadMatch obo:NCIT_C100769 ;
+    skos:notation "MDS_UPDRS_PART_III" .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_IV> a owl:Class ;
+    rdfs:label "MDS_UPDRS_PART_IV"@en ;
+    obo:IAO_0000115 "MDS-UPDRS Part IV (motor complications) total, 0-24."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:broadMatch obo:NCIT_C100769 ;
+    skos:notation "MDS_UPDRS_PART_IV" .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MOCA> a owl:Class ;
+    rdfs:label "Total score [MoCA]"@en ;
+    obo:IAO_0000115 "Montreal Cognitive Assessment total score, 0-30."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> ;
+    skos:closeMatch obo:NCIT_C162720 ;
+    skos:exactMatch <https://loinc.org/72172-0> ;
+    skos:notation "MOCA" .
+
+<https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum> a owl:Class ;
+    rdfs:label "ParkinsonsInstrumentEnum"@en ;
+    obo:IAO_0000115 "Rating scale totals recorded in Parkinson's studies. LOINC covers the MoCA total but not MDS-UPDRS: its UPDRS codes describe the original 1987 scale, which has different items and ranges."@en .
+

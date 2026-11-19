@@ -1,0 +1,57 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/CSF> a skos:Concept ;
+    skos:definition "Cerebrospinal fluid."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/UBERON_0001359> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> ;
+    skos:notation "CSF" ;
+    skos:prefLabel "cerebrospinal fluid"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/PLASMA> a skos:Concept ;
+    skos:definition "Blood plasma."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/UBERON_0001969> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> ;
+    skos:notation "PLASMA" ;
+    skos:prefLabel "blood plasma"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/SERUM> a skos:Concept ;
+    skos:definition "Blood serum."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/UBERON_0001977> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> ;
+    skos:notation "SERUM" ;
+    skos:prefLabel "blood serum"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/SKIN> a skos:Concept ;
+    skos:definition "Skin biopsy."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/UBERON_0002097> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> ;
+    skos:notation "SKIN" ;
+    skos:prefLabel "skin of body"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/WHOLE_BLOOD> a skos:Concept ;
+    skos:definition "Whole blood."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/UBERON_0000178> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> ;
+    skos:notation "WHOLE_BLOOD" ;
+    skos:prefLabel "blood"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum> a skos:ConceptScheme ;
+    dcterms:description "Anatomical material a specimen consists of."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "SpecimenTypeEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/CSF>,
+        <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/PLASMA>,
+        <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/SERUM>,
+        <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/SKIN>,
+        <https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/WHOLE_BLOOD> ;
+    skos:prefLabel "SpecimenTypeEnum"@en .
+

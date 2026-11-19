@@ -1,0 +1,36 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/CLINICALLY_ESTABLISHED> a skos:Concept ;
+    skos:definition "Clinically established (MDS PD and MSA criteria)."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> ;
+    skos:notation "CLINICALLY_ESTABLISHED" ;
+    skos:prefLabel "CLINICALLY_ESTABLISHED"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/POSSIBLE> a skos:Concept ;
+    skos:definition "Possible (PSP and DLB criteria)."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> ;
+    skos:notation "POSSIBLE" ;
+    skos:prefLabel "POSSIBLE"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/PROBABLE> a skos:Concept ;
+    skos:definition "Probable."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> ;
+    skos:notation "PROBABLE" ;
+    skos:prefLabel "PROBABLE"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum> a skos:ConceptScheme ;
+    dcterms:description "Level of diagnostic certainty defined by the criteria."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model> ;
+    dcterms:title "DiagnosticCertaintyEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/CLINICALLY_ESTABLISHED>,
+        <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/POSSIBLE>,
+        <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/PROBABLE> ;
+    skos:prefLabel "DiagnosticCertaintyEnum"@en .
+

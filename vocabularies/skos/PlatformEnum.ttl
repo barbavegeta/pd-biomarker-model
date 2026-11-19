@@ -1,0 +1,65 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/DAT_SPECT_IOFLUPANE> a skos:Concept ;
+    skos:definition "Dopamine transporter SPECT with the tracer ioflupane (123I)."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> ;
+    skos:notation "DAT_SPECT_IOFLUPANE" ;
+    skos:prefLabel "DAT_SPECT_IOFLUPANE"@en ;
+    skos:relatedMatch <http://purl.obolibrary.org/obo/CHEBI_68855> ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/OLINK_EXPLORE_3072> a skos:Concept ;
+    skos:definition "Olink Explore 3072 panel."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PRIDE_0000657> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> ;
+    skos:notation "OLINK_EXPLORE_3072" ;
+    skos:prefLabel "Olink Explore 3072/384"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/OLINK_EXPLORE_HT> a skos:Concept ;
+    skos:definition "Olink Explore HT panel."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PRIDE_0000673> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> ;
+    skos:notation "OLINK_EXPLORE_HT" ;
+    skos:prefLabel "Olink Explore HT"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/SIMOA_HD_X> a skos:Concept ;
+    skos:definition "Quanterix Simoa HD-X analyser. No ontology term exists."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> ;
+    skos:notation "SIMOA_HD_X" ;
+    skos:prefLabel "SIMOA_HD_X"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/SOMASCAN_5K> a skos:Concept ;
+    skos:definition "SomaScan 5K panel (assay v4.0)."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PRIDE_0000933> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> ;
+    skos:notation "SOMASCAN_5K" ;
+    skos:prefLabel "SomaScan 5K"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/SOMASCAN_7K> a skos:Concept ;
+    skos:definition "SomaScan 7K panel (assay v4.1)."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PRIDE_0000934> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> ;
+    skos:notation "SOMASCAN_7K" ;
+    skos:prefLabel "SomaScan 7K"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/PlatformEnum> a skos:ConceptScheme ;
+    dcterms:description "Commercial platform and panel version."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "PlatformEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/DAT_SPECT_IOFLUPANE>,
+        <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/OLINK_EXPLORE_3072>,
+        <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/OLINK_EXPLORE_HT>,
+        <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/SIMOA_HD_X>,
+        <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/SOMASCAN_5K>,
+        <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/SOMASCAN_7K> ;
+    skos:prefLabel "PlatformEnum"@en .
+

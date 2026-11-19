@@ -1,0 +1,68 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/ELISA> a skos:Concept ;
+    skos:definition "Enzyme-linked immunosorbent assay."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/OBI_0000661> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:notation "ELISA" ;
+    skos:prefLabel "enzyme-linked immunosorbent assay"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/OLINK> a skos:Concept ;
+    skos:broadMatch <http://purl.obolibrary.org/obo/OBI_0003113> ;
+    skos:definition "Olink proximity extension assay."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/OBI_0003112> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:notation "OLINK" ;
+    skos:prefLabel "Olink assay"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SEED_AMPLIFICATION_ASSAY> a skos:Concept ;
+    skos:broadMatch <http://purl.obolibrary.org/obo/OBI_0000070> ;
+    skos:definition "Alpha-synuclein seed amplification assay (e.g. RT-QuIC). No ontology has a specific term, so only a broad mapping is given."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:notation "SEED_AMPLIFICATION_ASSAY" ;
+    skos:prefLabel "SEED_AMPLIFICATION_ASSAY"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SIMOA> a skos:Concept ;
+    skos:definition "Single-molecule array digital immunoassay."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C161406> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:notation "SIMOA" ;
+    skos:prefLabel "Single-Molecule Array"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SOMASCAN> a skos:Concept ;
+    skos:definition "SomaScan aptamer-based proteomic assay."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/OBI_0003111> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:notation "SOMASCAN" ;
+    skos:prefLabel "SOMAscan assay"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SPECT> a skos:Concept ;
+    skos:broadMatch <http://purl.obolibrary.org/obo/OBI_0000185> ;
+    skos:definition "Single-photon emission computed tomography."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C17203> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:notation "SPECT" ;
+    skos:prefLabel "Single Photon Emission Computed Tomography"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> a skos:ConceptScheme ;
+    dcterms:description "Assay technology."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "AssayTechnologyEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/ELISA>,
+        <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/OLINK>,
+        <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SEED_AMPLIFICATION_ASSAY>,
+        <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SIMOA>,
+        <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SOMASCAN>,
+        <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SPECT> ;
+    skos:prefLabel "AssayTechnologyEnum"@en .
+

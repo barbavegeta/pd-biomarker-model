@@ -41,6 +41,17 @@ term's label in `title`. Where no exact term exists, the value carries a
 `broad_mappings`, `close_mappings` or `related_mappings` entry instead of a
 `meaning`.
 
+### Standalone vocabularies
+
+The fixed value sets are also exported as standalone vocabularies in
+[`vocabularies/`](https://github.com/barbavegeta/pd-biomarker-model/tree/main/vocabularies),
+ready to load into a terminology system: one SKOS concept scheme and one OWL
+ontology per value set, plus a TSV of all values. Each value has its own IRI
+under `https://w3id.org/pd-biomarker-model/vocab/` and links to its ontology
+terms with SKOS mapping properties. Dynamic value sets are exported as their
+defining query (source ontology, root terms, relationships) rather than as a
+member list, because their members follow each ontology release.
+
 ## Validation
 
 `linkml-validate --config validation.yaml` runs three layers of checks:

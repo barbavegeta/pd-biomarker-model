@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:broadMatch a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:narrowMatch a owl:AnnotationProperty .
+
+skos:notation a owl:AnnotationProperty .
+
+skos:relatedMatch a owl:AnnotationProperty .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum.owl> a owl:Ontology ;
+    dcterms:description "Assay technology."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "AssayTechnologyEnum"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/ELISA> a owl:Class ;
+    rdfs:label "enzyme-linked immunosorbent assay"@en ;
+    obo:IAO_0000115 "Enzyme-linked immunosorbent assay."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:exactMatch obo:OBI_0000661 ;
+    skos:notation "ELISA" .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/OLINK> a owl:Class ;
+    rdfs:label "Olink assay"@en ;
+    obo:IAO_0000115 "Olink proximity extension assay."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:broadMatch obo:OBI_0003113 ;
+    skos:exactMatch obo:OBI_0003112 ;
+    skos:notation "OLINK" .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SEED_AMPLIFICATION_ASSAY> a owl:Class ;
+    rdfs:label "SEED_AMPLIFICATION_ASSAY"@en ;
+    obo:IAO_0000115 "Alpha-synuclein seed amplification assay (e.g. RT-QuIC). No ontology has a specific term, so only a broad mapping is given."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:broadMatch obo:OBI_0000070 ;
+    skos:notation "SEED_AMPLIFICATION_ASSAY" .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SIMOA> a owl:Class ;
+    rdfs:label "Single-Molecule Array"@en ;
+    obo:IAO_0000115 "Single-molecule array digital immunoassay."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:exactMatch obo:NCIT_C161406 ;
+    skos:notation "SIMOA" .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SOMASCAN> a owl:Class ;
+    rdfs:label "SOMAscan assay"@en ;
+    obo:IAO_0000115 "SomaScan aptamer-based proteomic assay."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:exactMatch obo:OBI_0003111 ;
+    skos:notation "SOMASCAN" .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SPECT> a owl:Class ;
+    rdfs:label "Single Photon Emission Computed Tomography"@en ;
+    obo:IAO_0000115 "Single-photon emission computed tomography."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> ;
+    skos:broadMatch obo:OBI_0000185 ;
+    skos:exactMatch obo:NCIT_C17203 ;
+    skos:notation "SPECT" .
+
+<https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum> a owl:Class ;
+    rdfs:label "AssayTechnologyEnum"@en ;
+    obo:IAO_0000115 "Assay technology."@en .
+

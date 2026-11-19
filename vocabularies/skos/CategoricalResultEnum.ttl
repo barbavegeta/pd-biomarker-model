@@ -1,0 +1,39 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/INDETERMINATE> a skos:Concept ;
+    skos:definition "The result could not be called positive or negative."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C48658> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum> ;
+    skos:notation "INDETERMINATE" ;
+    skos:prefLabel "Indeterminate"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/NEGATIVE> a skos:Concept ;
+    skos:definition "The target was not detected."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C38757> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum> ;
+    skos:notation "NEGATIVE" ;
+    skos:prefLabel "Negative Finding"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/POSITIVE> a skos:Concept ;
+    skos:definition "The target was detected."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C38758> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum> ;
+    skos:notation "POSITIVE" ;
+    skos:prefLabel "Positive Finding"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum> a skos:ConceptScheme ;
+    dcterms:description "Result of a qualitative assay."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "CategoricalResultEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/INDETERMINATE>,
+        <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/NEGATIVE>,
+        <https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/POSITIVE> ;
+    skos:prefLabel "CategoricalResultEnum"@en .
+

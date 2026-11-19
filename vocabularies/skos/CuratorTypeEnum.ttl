@@ -1,0 +1,31 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum/AI_AGENT> a skos:Concept ;
+    skos:definition "An AI agent, such as an LLM-based curation tool."@en ;
+    skos:exactMatch prov:SoftwareAgent ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum> ;
+    skos:notation "AI_AGENT" ;
+    skos:prefLabel "SoftwareAgent"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum/PERSON> a skos:Concept ;
+    skos:definition "A human curator."@en ;
+    skos:exactMatch prov:Person ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum> ;
+    skos:notation "PERSON" ;
+    skos:prefLabel "Person"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum> a skos:ConceptScheme ;
+    dcterms:description "Kind of agent that curated a record."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "CuratorTypeEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum/AI_AGENT>,
+        <https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum/PERSON> ;
+    skos:prefLabel "CuratorTypeEnum"@en .
+

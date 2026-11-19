@@ -1,0 +1,46 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/CATEGORICAL> a skos:Concept ;
+    skos:definition "Qualitative result, e.g. a seed amplification assay call."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum> ;
+    skos:notation "CATEGORICAL" ;
+    skos:prefLabel "CATEGORICAL"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/CONCENTRATION> a skos:Concept ;
+    skos:definition "Absolute amount per volume, e.g. pg/mL."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PATO_0000033> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum> ;
+    skos:notation "CONCENTRATION" ;
+    skos:prefLabel "concentration of"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/RATIO> a skos:Concept ;
+    skos:definition "Dimensionless ratio, e.g. a DaT-SPECT specific binding ratio."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/STATO_0000184> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum> ;
+    skos:notation "RATIO" ;
+    skos:prefLabel "ratio"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/RELATIVE_ABUNDANCE> a skos:Concept ;
+    skos:definition "Platform-relative signal that is not an absolute concentration, e.g. SomaScan RFU or Olink NPX."@en ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum> ;
+    skos:notation "RELATIVE_ABUNDANCE" ;
+    skos:prefLabel "RELATIVE_ABUNDANCE"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum> a skos:ConceptScheme ;
+    dcterms:description "Kind of quantity a biomarker value represents."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "MeasurementTypeEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/CATEGORICAL>,
+        <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/CONCENTRATION>,
+        <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/RATIO>,
+        <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/RELATIVE_ABUNDANCE> ;
+    skos:prefLabel "MeasurementTypeEnum"@en .
+

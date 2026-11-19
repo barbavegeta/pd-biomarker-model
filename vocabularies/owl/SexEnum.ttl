@@ -1,0 +1,53 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:broadMatch a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:narrowMatch a owl:AnnotationProperty .
+
+skos:notation a owl:AnnotationProperty .
+
+skos:relatedMatch a owl:AnnotationProperty .
+
+<https://w3id.org/pd-biomarker-model/vocab/SexEnum.owl> a owl:Ontology ;
+    dcterms:description "Biological sex."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "SexEnum"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/pd-biomarker-model/vocab/SexEnum/FEMALE> a owl:Class ;
+    rdfs:label "female"@en ;
+    obo:IAO_0000115 "Female."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/SexEnum> ;
+    skos:exactMatch obo:PATO_0000383 ;
+    skos:notation "FEMALE" .
+
+<https://w3id.org/pd-biomarker-model/vocab/SexEnum/MALE> a owl:Class ;
+    rdfs:label "male"@en ;
+    obo:IAO_0000115 "Male."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/SexEnum> ;
+    skos:exactMatch obo:PATO_0000384 ;
+    skos:notation "MALE" .
+
+<https://w3id.org/pd-biomarker-model/vocab/SexEnum> a owl:Class ;
+    rdfs:label "SexEnum"@en ;
+    obo:IAO_0000115 "Biological sex."@en .
+

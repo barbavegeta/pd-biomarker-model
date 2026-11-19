@@ -1,0 +1,39 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/BILATERAL> a skos:Concept ;
+    skos:definition "Both sides, reported as the mean of left and right."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PATO_0000618> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> ;
+    skos:notation "BILATERAL" ;
+    skos:prefLabel "bilateral"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/LEFT> a skos:Concept ;
+    skos:definition "Left side."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PATO_0000366> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> ;
+    skos:notation "LEFT" ;
+    skos:prefLabel "left"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/RIGHT> a skos:Concept ;
+    skos:definition "Right side."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PATO_0000367> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> ;
+    skos:notation "RIGHT" ;
+    skos:prefLabel "right"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/LateralityEnum> a skos:ConceptScheme ;
+    dcterms:description "Side of the body."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "LateralityEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/BILATERAL>,
+        <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/LEFT>,
+        <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/RIGHT> ;
+    skos:prefLabel "LateralityEnum"@en .
+

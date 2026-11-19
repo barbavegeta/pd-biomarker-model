@@ -1,0 +1,52 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:broadMatch a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:narrowMatch a owl:AnnotationProperty .
+
+skos:notation a owl:AnnotationProperty .
+
+skos:relatedMatch a owl:AnnotationProperty .
+
+<https://w3id.org/pd-biomarker-model/vocab/ModalityEnum.owl> a owl:Ontology ;
+    dcterms:description "Source of a biomarker value."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "ModalityEnum"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/pd-biomarker-model/vocab/ModalityEnum/IMAGING> a owl:Class ;
+    rdfs:label "imaging assay"@en ;
+    obo:IAO_0000115 "Measured from an imaging scan."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/ModalityEnum> ;
+    skos:exactMatch obo:OBI_0000185 ;
+    skos:notation "IMAGING" .
+
+<https://w3id.org/pd-biomarker-model/vocab/ModalityEnum/SPECIMEN> a owl:Class ;
+    rdfs:label "SPECIMEN"@en ;
+    obo:IAO_0000115 "Measured in a fluid or tissue specimen."@en ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/ModalityEnum> ;
+    skos:notation "SPECIMEN" .
+
+<https://w3id.org/pd-biomarker-model/vocab/ModalityEnum> a owl:Class ;
+    rdfs:label "ModalityEnum"@en ;
+    obo:IAO_0000115 "Source of a biomarker value."@en .
+

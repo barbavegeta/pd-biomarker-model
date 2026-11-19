@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/SexEnum/FEMALE> a skos:Concept ;
+    skos:definition "Female."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PATO_0000383> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/SexEnum> ;
+    skos:notation "FEMALE" ;
+    skos:prefLabel "female"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/SexEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/SexEnum/MALE> a skos:Concept ;
+    skos:definition "Male."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/PATO_0000384> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/SexEnum> ;
+    skos:notation "MALE" ;
+    skos:prefLabel "male"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/SexEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/SexEnum> a skos:ConceptScheme ;
+    dcterms:description "Biological sex."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "SexEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/SexEnum/FEMALE>,
+        <https://w3id.org/pd-biomarker-model/vocab/SexEnum/MALE> ;
+    skos:prefLabel "SexEnum"@en .
+

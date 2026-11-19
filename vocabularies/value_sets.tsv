@@ -1,0 +1,59 @@
+value_set	module	code	label	definition	iri	exact_match	close_match	broad_match	narrow_match	related_match	see_also
+AssayTechnologyEnum	core	ELISA	enzyme-linked immunosorbent assay	Enzyme-linked immunosorbent assay.	https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/ELISA	OBI:0000661					
+AssayTechnologyEnum	core	SIMOA	Single-Molecule Array	Single-molecule array digital immunoassay.	https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SIMOA	NCIT:C161406					
+AssayTechnologyEnum	core	SOMASCAN	SOMAscan assay	SomaScan aptamer-based proteomic assay.	https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SOMASCAN	OBI:0003111					
+AssayTechnologyEnum	core	OLINK	Olink assay	Olink proximity extension assay.	https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/OLINK	OBI:0003112		OBI:0003113			
+AssayTechnologyEnum	core	SEED_AMPLIFICATION_ASSAY	SEED_AMPLIFICATION_ASSAY	Alpha-synuclein seed amplification assay (e.g. RT-QuIC). No ontology has a specific term, so only a broad mapping is given.	https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SEED_AMPLIFICATION_ASSAY			OBI:0000070			
+AssayTechnologyEnum	core	SPECT	Single Photon Emission Computed Tomography	Single-photon emission computed tomography.	https://w3id.org/pd-biomarker-model/vocab/AssayTechnologyEnum/SPECT	NCIT:C17203		OBI:0000185			
+CategoricalResultEnum	core	POSITIVE	Positive Finding	The target was detected.	https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/POSITIVE	NCIT:C38758					
+CategoricalResultEnum	core	NEGATIVE	Negative Finding	The target was not detected.	https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/NEGATIVE	NCIT:C38757					
+CategoricalResultEnum	core	INDETERMINATE	Indeterminate	The result could not be called positive or negative.	https://w3id.org/pd-biomarker-model/vocab/CategoricalResultEnum/INDETERMINATE	NCIT:C48658					
+CohortEnum	core	CASE	Participant Case	Enrolled because they have the condition under study.	https://w3id.org/pd-biomarker-model/vocab/CohortEnum/CASE	NCIT:C216103					
+CohortEnum	core	HEALTHY_CONTROL	Healthy Control	Enrolled as a healthy comparison participant.	https://w3id.org/pd-biomarker-model/vocab/CohortEnum/HEALTHY_CONTROL	NCIT:C94342					
+CohortEnum	core	PRODROMAL	Prodromal Phase of Disease	Enrolled with prodromal features but no diagnosis.	https://w3id.org/pd-biomarker-model/vocab/CohortEnum/PRODROMAL	NCIT:C209884					
+CuratorTypeEnum	core	PERSON	Person	A human curator.	https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum/PERSON	prov:Person					
+CuratorTypeEnum	core	AI_AGENT	SoftwareAgent	An AI agent, such as an LLM-based curation tool.	https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum/AI_AGENT	prov:SoftwareAgent					
+DiagnosticCertaintyEnum	pd_biomarker_model	CLINICALLY_ESTABLISHED	CLINICALLY_ESTABLISHED	Clinically established (MDS PD and MSA criteria).	https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/CLINICALLY_ESTABLISHED						
+DiagnosticCertaintyEnum	pd_biomarker_model	PROBABLE	PROBABLE	Probable.	https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/PROBABLE						
+DiagnosticCertaintyEnum	pd_biomarker_model	POSSIBLE	POSSIBLE	Possible (PSP and DLB criteria).	https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/POSSIBLE						
+DiagnosticCriteriaEnum	pd_biomarker_model	MDS_PD_2015	MDS_PD_2015	MDS clinical diagnostic criteria for Parkinson's disease (Postuma et al., 2015).	https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/MDS_PD_2015						doi:10.1002/mds.26424
+DiagnosticCriteriaEnum	pd_biomarker_model	UK_PDS_BRAIN_BANK	UK_PDS_BRAIN_BANK	UK Parkinson's Disease Society Brain Bank criteria (Hughes et al., 1992).	https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/UK_PDS_BRAIN_BANK						doi:10.1136/jnnp.55.3.181
+DiagnosticCriteriaEnum	pd_biomarker_model	MDS_MSA_2022	MDS_MSA_2022	MDS criteria for multiple system atrophy (Wenning et al., 2022).	https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/MDS_MSA_2022						doi:10.1002/mds.29005
+DiagnosticCriteriaEnum	pd_biomarker_model	MDS_PSP_2017	MDS_PSP_2017	MDS criteria for progressive supranuclear palsy (Höglinger et al., 2017).	https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/MDS_PSP_2017						doi:10.1002/mds.26987
+DiagnosticCriteriaEnum	pd_biomarker_model	DLB_CONSORTIUM_2017	DLB_CONSORTIUM_2017	Fourth consensus report of the DLB Consortium (McKeith et al., 2017).	https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/DLB_CONSORTIUM_2017						doi:10.1212/WNL.0000000000004058
+LateralityEnum	core	LEFT	left	Left side.	https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/LEFT	PATO:0000366					
+LateralityEnum	core	RIGHT	right	Right side.	https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/RIGHT	PATO:0000367					
+LateralityEnum	core	BILATERAL	bilateral	Both sides, reported as the mean of left and right.	https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/BILATERAL	PATO:0000618					
+MeasurementTypeEnum	core	CONCENTRATION	concentration of	Absolute amount per volume, e.g. pg/mL.	https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/CONCENTRATION	PATO:0000033					
+MeasurementTypeEnum	core	RELATIVE_ABUNDANCE	RELATIVE_ABUNDANCE	Platform-relative signal that is not an absolute concentration, e.g. SomaScan RFU or Olink NPX.	https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/RELATIVE_ABUNDANCE						
+MeasurementTypeEnum	core	RATIO	ratio	Dimensionless ratio, e.g. a DaT-SPECT specific binding ratio.	https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/RATIO	STATO:0000184					
+MeasurementTypeEnum	core	CATEGORICAL	CATEGORICAL	Qualitative result, e.g. a seed amplification assay call.	https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/CATEGORICAL						
+MedicationStateEnum	pd_biomarker_model	ON	ON	Examined while responding to dopaminergic medication.	https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum/ON						
+MedicationStateEnum	pd_biomarker_model	OFF	OFF	Examined after withholding dopaminergic medication.	https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum/OFF						
+MedicationStateEnum	pd_biomarker_model	UNTREATED	UNTREATED	Not yet taking dopaminergic medication.	https://w3id.org/pd-biomarker-model/vocab/MedicationStateEnum/UNTREATED						
+ModalityEnum	core	SPECIMEN	SPECIMEN	Measured in a fluid or tissue specimen.	https://w3id.org/pd-biomarker-model/vocab/ModalityEnum/SPECIMEN						
+ModalityEnum	core	IMAGING	imaging assay	Measured from an imaging scan.	https://w3id.org/pd-biomarker-model/vocab/ModalityEnum/IMAGING	OBI:0000185					
+ParkinsonsInstrumentEnum	pd_biomarker_model	MDS_UPDRS_PART_I	MDS_UPDRS_PART_I	MDS-UPDRS Part I (non-motor experiences of daily living) total, 0-52.	https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_I			NCIT:C100769			
+ParkinsonsInstrumentEnum	pd_biomarker_model	MDS_UPDRS_PART_II	MDS_UPDRS_PART_II	MDS-UPDRS Part II (motor experiences of daily living) total, 0-52.	https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_II			NCIT:C100769			
+ParkinsonsInstrumentEnum	pd_biomarker_model	MDS_UPDRS_PART_III	MDS_UPDRS_PART_III	MDS-UPDRS Part III (motor examination) total, 0-132.	https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_III			NCIT:C100769			
+ParkinsonsInstrumentEnum	pd_biomarker_model	MDS_UPDRS_PART_IV	MDS_UPDRS_PART_IV	MDS-UPDRS Part IV (motor complications) total, 0-24.	https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MDS_UPDRS_PART_IV			NCIT:C100769			
+ParkinsonsInstrumentEnum	pd_biomarker_model	HOEHN_YAHR	MDS-UPDRS - Hoehn and Yahr Stage	Hoehn and Yahr stage as rated in MDS-UPDRS, 0-5.	https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/HOEHN_YAHR	NCIT:C100535				LOINC:77714-4	
+ParkinsonsInstrumentEnum	pd_biomarker_model	MOCA	Total score [MoCA]	Montreal Cognitive Assessment total score, 0-30.	https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/MOCA	LOINC:72172-0	NCIT:C162720				
+PlatformEnum	core	SOMASCAN_5K	SomaScan 5K	SomaScan 5K panel (assay v4.0).	https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/SOMASCAN_5K	PRIDE:0000933					
+PlatformEnum	core	SOMASCAN_7K	SomaScan 7K	SomaScan 7K panel (assay v4.1).	https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/SOMASCAN_7K	PRIDE:0000934					
+PlatformEnum	core	OLINK_EXPLORE_3072	Olink Explore 3072/384	Olink Explore 3072 panel.	https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/OLINK_EXPLORE_3072	PRIDE:0000657					
+PlatformEnum	core	OLINK_EXPLORE_HT	Olink Explore HT	Olink Explore HT panel.	https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/OLINK_EXPLORE_HT	PRIDE:0000673					
+PlatformEnum	core	SIMOA_HD_X	SIMOA_HD_X	Quanterix Simoa HD-X analyser. No ontology term exists.	https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/SIMOA_HD_X						
+PlatformEnum	core	DAT_SPECT_IOFLUPANE	DAT_SPECT_IOFLUPANE	Dopamine transporter SPECT with the tracer ioflupane (123I).	https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/DAT_SPECT_IOFLUPANE					CHEBI:68855	
+SexEnum	core	FEMALE	female	Female.	https://w3id.org/pd-biomarker-model/vocab/SexEnum/FEMALE	PATO:0000383					
+SexEnum	core	MALE	male	Male.	https://w3id.org/pd-biomarker-model/vocab/SexEnum/MALE	PATO:0000384					
+SpecimenTypeEnum	core	CSF	cerebrospinal fluid	Cerebrospinal fluid.	https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/CSF	UBERON:0001359					
+SpecimenTypeEnum	core	PLASMA	blood plasma	Blood plasma.	https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/PLASMA	UBERON:0001969					
+SpecimenTypeEnum	core	SERUM	blood serum	Blood serum.	https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/SERUM	UBERON:0001977					
+SpecimenTypeEnum	core	WHOLE_BLOOD	blood	Whole blood.	https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/WHOLE_BLOOD	UBERON:0000178					
+SpecimenTypeEnum	core	SKIN	skin of body	Skin biopsy.	https://w3id.org/pd-biomarker-model/vocab/SpecimenTypeEnum/SKIN	UBERON:0002097					
+UnitEnum	core	pg/mL	picogram per milliliter	Picograms per millilitre.	https://w3id.org/pd-biomarker-model/vocab/UnitEnum/pg%2FmL	UO:0010070					
+UnitEnum	core	ng/mL	nanogram per milliliter	Nanograms per millilitre.	https://w3id.org/pd-biomarker-model/vocab/UnitEnum/ng%2FmL	UO:0000275					
+UnitEnum	core	1	dimensionless unit	Dimensionless (UCUM unity), used for ratios.	https://w3id.org/pd-biomarker-model/vocab/UnitEnum/1	UO:0000186					
+UnitEnum	core	{RFU}	Relative Fluorescence Intensity Unit	SomaScan relative fluorescence units.	https://w3id.org/pd-biomarker-model/vocab/UnitEnum/%7BRFU%7D	NCIT:C77535					
+UnitEnum	core	{NPX}	{NPX}	Olink normalised protein expression, an arbitrary log2 unit.	https://w3id.org/pd-biomarker-model/vocab/UnitEnum/%7BNPX%7D						

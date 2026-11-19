@@ -1,0 +1,39 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CohortEnum/CASE> a skos:Concept ;
+    skos:definition "Enrolled because they have the condition under study."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C216103> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/CohortEnum> ;
+    skos:notation "CASE" ;
+    skos:prefLabel "Participant Case"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/CohortEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CohortEnum/HEALTHY_CONTROL> a skos:Concept ;
+    skos:definition "Enrolled as a healthy comparison participant."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C94342> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/CohortEnum> ;
+    skos:notation "HEALTHY_CONTROL" ;
+    skos:prefLabel "Healthy Control"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/CohortEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CohortEnum/PRODROMAL> a skos:Concept ;
+    skos:definition "Enrolled with prodromal features but no diagnosis."@en ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C209884> ;
+    skos:inScheme <https://w3id.org/pd-biomarker-model/vocab/CohortEnum> ;
+    skos:notation "PRODROMAL" ;
+    skos:prefLabel "Prodromal Phase of Disease"@en ;
+    skos:topConceptOf <https://w3id.org/pd-biomarker-model/vocab/CohortEnum> .
+
+<https://w3id.org/pd-biomarker-model/vocab/CohortEnum> a skos:ConceptScheme ;
+    dcterms:description "Study arm a participant was enrolled in."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
+    dcterms:title "CohortEnum"@en ;
+    owl:versionInfo "0.1.0" ;
+    skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/CohortEnum/CASE>,
+        <https://w3id.org/pd-biomarker-model/vocab/CohortEnum/HEALTHY_CONTROL>,
+        <https://w3id.org/pd-biomarker-model/vocab/CohortEnum/PRODROMAL> ;
+    skos:prefLabel "CohortEnum"@en .
+

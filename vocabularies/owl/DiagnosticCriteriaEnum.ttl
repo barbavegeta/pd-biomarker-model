@@ -1,0 +1,74 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:broadMatch a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:exactMatch a owl:AnnotationProperty .
+
+skos:narrowMatch a owl:AnnotationProperty .
+
+skos:notation a owl:AnnotationProperty .
+
+skos:relatedMatch a owl:AnnotationProperty .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum.owl> a owl:Ontology ;
+    dcterms:description "Published clinical diagnostic criteria for parkinsonian disorders."@en ;
+    dcterms:license <https://spdx.org/licenses/MIT> ;
+    dcterms:source <https://w3id.org/pd-biomarker-model> ;
+    dcterms:title "DiagnosticCriteriaEnum"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/DLB_CONSORTIUM_2017> a owl:Class ;
+    rdfs:label "DLB_CONSORTIUM_2017"@en ;
+    obo:IAO_0000115 "Fourth consensus report of the DLB Consortium (McKeith et al., 2017)."@en ;
+    rdfs:seeAlso <https://doi.org/10.1212/WNL.0000000000004058> ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum> ;
+    skos:notation "DLB_CONSORTIUM_2017" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/MDS_MSA_2022> a owl:Class ;
+    rdfs:label "MDS_MSA_2022"@en ;
+    obo:IAO_0000115 "MDS criteria for multiple system atrophy (Wenning et al., 2022)."@en ;
+    rdfs:seeAlso <https://doi.org/10.1002/mds.29005> ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum> ;
+    skos:notation "MDS_MSA_2022" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/MDS_PD_2015> a owl:Class ;
+    rdfs:label "MDS_PD_2015"@en ;
+    obo:IAO_0000115 "MDS clinical diagnostic criteria for Parkinson's disease (Postuma et al., 2015)."@en ;
+    rdfs:seeAlso <https://doi.org/10.1002/mds.26424> ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum> ;
+    skos:notation "MDS_PD_2015" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/MDS_PSP_2017> a owl:Class ;
+    rdfs:label "MDS_PSP_2017"@en ;
+    obo:IAO_0000115 "MDS criteria for progressive supranuclear palsy (Höglinger et al., 2017)."@en ;
+    rdfs:seeAlso <https://doi.org/10.1002/mds.26987> ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum> ;
+    skos:notation "MDS_PSP_2017" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/UK_PDS_BRAIN_BANK> a owl:Class ;
+    rdfs:label "UK_PDS_BRAIN_BANK"@en ;
+    obo:IAO_0000115 "UK Parkinson's Disease Society Brain Bank criteria (Hughes et al., 1992)."@en ;
+    rdfs:seeAlso <https://doi.org/10.1136/jnnp.55.3.181> ;
+    rdfs:subClassOf <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum> ;
+    skos:notation "UK_PDS_BRAIN_BANK" .
+
+<https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum> a owl:Class ;
+    rdfs:label "DiagnosticCriteriaEnum"@en ;
+    obo:IAO_0000115 "Published clinical diagnostic criteria for parkinsonian disorders."@en .
+
