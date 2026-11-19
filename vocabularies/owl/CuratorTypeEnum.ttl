@@ -32,7 +32,7 @@ skos:relatedMatch a owl:AnnotationProperty .
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
     dcterms:title "CuratorTypeEnum"@en ;
-    owl:versionInfo "0.2.0" .
+    owl:versionInfo "0.2.1" .
 
 <https://w3id.org/pd-biomarker-model/vocab/CuratorTypeEnum/AI_AGENT> a owl:Class ;
     rdfs:label "SoftwareAgent"@en ;

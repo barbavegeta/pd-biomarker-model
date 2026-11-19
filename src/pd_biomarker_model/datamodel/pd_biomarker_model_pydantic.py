@@ -30,7 +30,7 @@ from pydantic import (
 
 
 metamodel_version = "1.12.0"
-version = "0.2.0"
+version = "0.2.1"
 
 
 class ConfiguredBaseModel(BaseModel):
@@ -120,7 +120,7 @@ linkml_meta = LinkMLMeta({'default_prefix': 'pdbm',
                            'prefix_reference': 'http://www.w3.org/2000/01/rdf-schema#'},
                   'schema': {'prefix_prefix': 'schema',
                              'prefix_reference': 'http://schema.org/'}},
-     'see_also': ['https://barbavegeta.github.io/pd-biomarker-model'],
+     'see_also': ['https://github.com/barbavegeta/pd-biomarker-model'],
      'source_file': 'src/pd_biomarker_model/schema/pd_biomarker_model.yaml',
      'title': "Parkinson's disease biomarker model"} )
 

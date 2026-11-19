@@ -74,7 +74,6 @@ nav:
 exclude_docs: |
   /templates-linkml/
 
-site_url: https://barbavegeta.github.io/pd-biomarker-model
 repo_url: https://github.com/barbavegeta/pd-biomarker-model
 
 # Uncomment this block to enable use of Google Analytics.

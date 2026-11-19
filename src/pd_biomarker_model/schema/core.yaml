@@ -6,10 +6,10 @@ description: >-
   diagnoses, phenotypes, clinical assessments, specimens and biomarker
   measurements with provenance. Disease modules import this schema and
   narrow its value sets and rules.
-version: 0.2.0
+version: 0.2.1
 license: MIT
 see_also:
-  - https://barbavegeta.github.io/pd-biomarker-model
+  - https://github.com/barbavegeta/pd-biomarker-model
 
 prefixes:
   linkml: https://w3id.org/linkml/

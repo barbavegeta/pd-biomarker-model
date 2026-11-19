@@ -6,10 +6,10 @@ description: >-
   diagnoses to parkinsonian disorders, binds clinical assessments to
   MDS-UPDRS, MoCA and Hoehn and Yahr, and adds instrument-specific
   validation rules.
-version: 0.2.0
+version: 0.2.1
 license: MIT
 see_also:
-  - https://barbavegeta.github.io/pd-biomarker-model
+  - https://github.com/barbavegeta/pd-biomarker-model
 
 prefixes:
   linkml: https://w3id.org/linkml/

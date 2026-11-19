@@ -4,10 +4,6 @@
 
 LinkML data model for Parkinson's disease phenotypes and biomarkers, with ontology-bound value sets, validation and AI-assisted SSSOM mapping on synthetic data
 
-## Documentation Website
-
-[https://barbavegeta.github.io/pd-biomarker-model](https://barbavegeta.github.io/pd-biomarker-model)
-
 ## Repository Structure
 
 * [docs/](docs/) - mkdocs-managed documentation

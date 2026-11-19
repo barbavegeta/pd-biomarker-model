@@ -31,7 +31,7 @@
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
     dcterms:title "CohortEnum"@en ;
-    owl:versionInfo "0.2.0" ;
+    owl:versionInfo "0.2.1" ;
     skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/CohortEnum/CASE>,
         <https://w3id.org/pd-biomarker-model/vocab/CohortEnum/HEALTHY_CONTROL>,
         <https://w3id.org/pd-biomarker-model/vocab/CohortEnum/PRODROMAL> ;

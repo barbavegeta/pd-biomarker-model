@@ -14,6 +14,12 @@ uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html):
 Before 1.0.0, a change that would need a major version increases the minor
 version instead.
 
+## [0.2.1] - 2026-11-19
+
+### Changed
+
+- The schema's `see_also` link points to the GitHub repository.
+
 ## [0.2.0] - 2026-11-19
 
 ### Changed
