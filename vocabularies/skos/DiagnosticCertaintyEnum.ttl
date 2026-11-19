@@ -28,7 +28,7 @@
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model> ;
     dcterms:title "DiagnosticCertaintyEnum"@en ;
-    owl:versionInfo "0.2.1" ;
+    owl:versionInfo "0.3.0" ;
     skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/CLINICALLY_ESTABLISHED>,
         <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/POSSIBLE>,
         <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCertaintyEnum/PROBABLE> ;

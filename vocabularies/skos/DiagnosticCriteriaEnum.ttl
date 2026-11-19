@@ -48,7 +48,7 @@
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model> ;
     dcterms:title "DiagnosticCriteriaEnum"@en ;
-    owl:versionInfo "0.2.1" ;
+    owl:versionInfo "0.3.0" ;
     skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/DLB_CONSORTIUM_2017>,
         <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/MDS_MSA_2022>,
         <https://w3id.org/pd-biomarker-model/vocab/DiagnosticCriteriaEnum/MDS_PD_2015>,

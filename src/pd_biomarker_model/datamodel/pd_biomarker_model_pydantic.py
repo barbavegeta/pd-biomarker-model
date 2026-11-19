@@ -30,7 +30,7 @@ from pydantic import (
 
 
 metamodel_version = "1.12.0"
-version = "0.2.1"
+version = "0.3.0"
 
 
 class ConfiguredBaseModel(BaseModel):
@@ -208,7 +208,7 @@ class SpecimenTypeEnum(str, Enum):
 
 class BrainRegionEnum(str):
     """
-    Any part of the brain in UBERON.
+    Any anatomical part of the brain in UBERON. UBERON also relates cell types to the brain (a hippocampal astrocyte is part of the brain), but an imaging value is read from a region, never a cell type, so terms under Cell Ontology's cell are excluded.
     """
 
     @classmethod

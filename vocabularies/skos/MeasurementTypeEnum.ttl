@@ -37,7 +37,7 @@
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
     dcterms:title "MeasurementTypeEnum"@en ;
-    owl:versionInfo "0.2.1" ;
+    owl:versionInfo "0.3.0" ;
     skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/CATEGORICAL>,
         <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/CONCENTRATION>,
         <https://w3id.org/pd-biomarker-model/vocab/MeasurementTypeEnum/RATIO>,

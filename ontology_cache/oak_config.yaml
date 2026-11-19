@@ -6,6 +6,9 @@ ontology_adapters:
   MONDO: sqlite:obo:mondo
   HP: sqlite:obo:hp
   UBERON: sqlite:obo:uberon
+  # Cell types are read from the UBERON database, which imports the Cell
+  # Ontology terms it relates to anatomy (used to exclude them from brain regions).
+  CL: sqlite:obo:uberon
   OBI: sqlite:obo:obi
   PATO: sqlite:obo:pato
   NCIT: sqlite:obo:ncit

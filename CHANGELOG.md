@@ -14,6 +14,14 @@ uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html):
 Before 1.0.0, a change that would need a major version increases the minor
 version instead.
 
+## [0.3.0] - 2026-11-19
+
+### Changed
+
+- Brain regions (`BrainRegionEnum`) exclude cell types. UBERON relates Cell
+  Ontology terms to the brain through part-of, so 35 cell types such as
+  hippocampal astrocyte were accepted as imaging regions.
+
 ## [0.2.1] - 2026-11-19
 
 ### Changed

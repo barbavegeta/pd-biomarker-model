@@ -6,7 +6,7 @@ description: >-
   diagnoses to parkinsonian disorders, binds clinical assessments to
   MDS-UPDRS, MoCA and Hoehn and Yahr, and adds instrument-specific
   validation rules.
-version: 0.2.1
+version: 0.3.0
 license: MIT
 see_also:
   - https://github.com/barbavegeta/pd-biomarker-model

@@ -59,7 +59,7 @@ from linkml_runtime.linkml_model.types import Boolean, Date, Float, Integer, Str
 from linkml_runtime.utils.metamodelcore import Bool, URI, URIorCURIE, XSDDate
 
 metamodel_version = "1.12.0"
-version = "0.2.1"
+version = "0.3.0"
 
 # Namespaces
 BFO = CurieNamespace('BFO', 'http://purl.obolibrary.org/obo/BFO_')
@@ -1025,11 +1025,13 @@ class SpecimenTypeEnum(EnumDefinitionImpl):
 
 class BrainRegionEnum(EnumDefinitionImpl):
     """
-    Any part of the brain in UBERON.
+    Any anatomical part of the brain in UBERON. UBERON also relates cell types to the brain (a hippocampal astrocyte
+    is part of the brain), but an imaging value is read from a region, never a cell type, so terms under Cell
+    Ontology's cell are excluded.
     """
     _defn = EnumDefinition(
         name="BrainRegionEnum",
-        description="Any part of the brain in UBERON.",
+        description="""Any anatomical part of the brain in UBERON. UBERON also relates cell types to the brain (a hippocampal astrocyte is part of the brain), but an imaging value is read from a region, never a cell type, so terms under Cell Ontology's cell are excluded.""",
     )
 
 class LateralityEnum(EnumDefinitionImpl):

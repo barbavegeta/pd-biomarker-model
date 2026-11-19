@@ -6,7 +6,7 @@ description: >-
   diagnoses, phenotypes, clinical assessments, specimens and biomarker
   measurements with provenance. Disease modules import this schema and
   narrow its value sets and rules.
-version: 0.2.1
+version: 0.3.0
 license: MIT
 see_also:
   - https://github.com/barbavegeta/pd-biomarker-model
@@ -648,7 +648,11 @@ enums:
         meaning: UBERON:0002097
 
   BrainRegionEnum:
-    description: Any part of the brain in UBERON.
+    description: >-
+      Any anatomical part of the brain in UBERON. UBERON also relates cell
+      types to the brain (a hippocampal astrocyte is part of the brain), but
+      an imaging value is read from a region, never a cell type, so terms
+      under Cell Ontology's cell are excluded.
     reachable_from:
       source_ontology: obo:uberon
       source_nodes:
@@ -657,6 +661,14 @@ enums:
         - rdfs:subClassOf
         - BFO:0000050
       include_self: true
+    minus:
+      - reachable_from:
+          source_ontology: obo:uberon
+          source_nodes:
+            - CL:0000000
+          relationship_types:
+            - rdfs:subClassOf
+          include_self: true
 
   LateralityEnum:
     description: Side of the body.

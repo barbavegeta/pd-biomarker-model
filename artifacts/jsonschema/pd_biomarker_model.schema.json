@@ -455,7 +455,7 @@
             "type": "object"
         },
         "BrainRegionEnum": {
-            "description": "Any part of the brain in UBERON.",
+            "description": "Any anatomical part of the brain in UBERON. UBERON also relates cell types to the brain (a hippocampal astrocyte is part of the brain), but an imaging value is read from a region, never a cell type, so terms under Cell Ontology's cell are excluded.",
             "title": "BrainRegionEnum",
             "type": "string"
         },
@@ -1602,6 +1602,6 @@
     ],
     "title": "pd_biomarker_model",
     "type": "object",
-    "version": "0.2.1"
+    "version": "0.3.0"
 }
 

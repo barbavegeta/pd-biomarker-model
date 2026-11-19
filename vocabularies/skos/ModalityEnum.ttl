@@ -22,7 +22,7 @@
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
     dcterms:title "ModalityEnum"@en ;
-    owl:versionInfo "0.2.1" ;
+    owl:versionInfo "0.3.0" ;
     skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/ModalityEnum/IMAGING>,
         <https://w3id.org/pd-biomarker-model/vocab/ModalityEnum/SPECIMEN> ;
     skos:prefLabel "ModalityEnum"@en .

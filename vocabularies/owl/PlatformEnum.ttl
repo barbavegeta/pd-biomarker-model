@@ -31,7 +31,7 @@ skos:relatedMatch a owl:AnnotationProperty .
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
     dcterms:title "PlatformEnum"@en ;
-    owl:versionInfo "0.2.1" .
+    owl:versionInfo "0.3.0" .
 
 <https://w3id.org/pd-biomarker-model/vocab/PlatformEnum/DAT_SPECT_IOFLUPANE> a owl:Class ;
     rdfs:label "DAT_SPECT_IOFLUPANE"@en ;

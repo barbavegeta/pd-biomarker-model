@@ -1,5 +1,5 @@
 value_set	module	description	source_ontology	source_nodes	relationship_types	include_self
-BrainRegionEnum	core	Any part of the brain in UBERON.	obo:uberon	UBERON:0000955	rdfs:subClassOf|BFO:0000050	true
+BrainRegionEnum	core	Any anatomical part of the brain in UBERON. UBERON also relates cell types to the brain (a hippocampal astrocyte is part of the brain), but an imaging value is read from a region, never a cell type, so terms under Cell Ontology's cell are excluded.	obo:uberon	UBERON:0000955	rdfs:subClassOf|BFO:0000050	true
 DiseaseEnum	core	Any disease in MONDO.	obo:mondo	MONDO:0000001	rdfs:subClassOf	false
 ParkinsonianDisorderEnum	pd_biomarker_model	Parkinson disease and the atypical parkinsonian disorders it is most often distinguished from. MONDO files multiple system atrophy and Lewy body dementia under synucleinopathy, and progressive supranuclear palsy under movement disorder, rather than under parkinsonian disorder, so each is listed as its own root.	obo:mondo	MONDO:0021095|MONDO:0007803|MONDO:0019037|MONDO:0007488	rdfs:subClassOf	true
 PhenotypeEnum	core	Any phenotypic abnormality in HPO.	obo:hp	HP:0000118	rdfs:subClassOf	false

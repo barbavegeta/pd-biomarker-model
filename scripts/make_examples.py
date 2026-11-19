@@ -322,6 +322,9 @@ MUTATIONS = {
     "brain-region-not-in-brain": (
         "Imaging regions must be parts of the brain.", "not in dynamic enum 'BrainRegionEnum'",
         lambda d: _imaging(d, brain_region="UBERON:0000178")),
+    "brain-region-is-cell-type": (
+        "Imaging regions are anatomical structures, not cell types.", "not in dynamic enum 'BrainRegionEnum'",
+        lambda d: _imaging(d, brain_region="CL:0002604")),
     "visit-before-enrolment": (
         "A visit cannot precede enrolment.", "is before enrolment_date",
         lambda d: d["visits"][0].update(visit_date="2024-02-26")),

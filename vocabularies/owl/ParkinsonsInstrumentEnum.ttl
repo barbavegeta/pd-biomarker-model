@@ -31,7 +31,7 @@ skos:relatedMatch a owl:AnnotationProperty .
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model> ;
     dcterms:title "ParkinsonsInstrumentEnum"@en ;
-    owl:versionInfo "0.2.1" .
+    owl:versionInfo "0.3.0" .
 
 <https://w3id.org/pd-biomarker-model/vocab/ParkinsonsInstrumentEnum/HOEHN_YAHR> a owl:Class ;
     rdfs:label "MDS-UPDRS - Hoehn and Yahr Stage"@en ;

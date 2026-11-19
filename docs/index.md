@@ -31,7 +31,8 @@ See the [model diagram](diagram.md) and the [schema reference](elements/index.md
   dementia)
 - **Phenotypes**: HPO, dynamic (descendants of *Phenotypic abnormality*)
 - **Specimen types**: UBERON
-- **Brain regions for imaging**: UBERON, dynamic (parts of *brain*)
+- **Brain regions for imaging**: UBERON, dynamic (parts of *brain*, excluding
+  cell types)
 - **Assay technologies**: OBI and NCIT
 - **Platforms and panel versions**: PRIDE
 - **Units**: UCUM codes, mapped to UO

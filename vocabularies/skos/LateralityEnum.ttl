@@ -31,7 +31,7 @@
     dcterms:license <https://spdx.org/licenses/MIT> ;
     dcterms:source <https://w3id.org/pd-biomarker-model/core> ;
     dcterms:title "LateralityEnum"@en ;
-    owl:versionInfo "0.2.1" ;
+    owl:versionInfo "0.3.0" ;
     skos:hasTopConcept <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/BILATERAL>,
         <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/LEFT>,
         <https://w3id.org/pd-biomarker-model/vocab/LateralityEnum/RIGHT> ;
