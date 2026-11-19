@@ -1,69 +1,69 @@
 variable_id	variable_name	description	unit	object_id	object_label	predicate_id	rationale	needs_attention	decision	corrected_object_id	corrected_predicate_id	reviewer_note
-src:V001	SUBJ_NO	participant number (study)		NCIT:C83083	Subject Identifier	skos:exactMatch	Study-level subject identifier. Not C69256 (unique across studies).	y				
-src:V002	site	recruiting centre		NCIT:C83081	Study Site Identifier	skos:exactMatch	Study site identifier.					
-src:V003	Gender (M/F)	biological sex as recorded at screening		NCIT:C28421	Sex	skos:exactMatch	Values are biological sex, so Sex, not Gender (C17357). NCIT also has an undefined duplicate 'Sex' (C38389).	y				
-src:V004	yob	year of birth		NCIT:C83164	Birth Year	skos:exactMatch						
-src:V005	EDUC_YRS	years in formal education	years	NCIT:C122393	Number of Years of Education	skos:exactMatch						
-src:V006	handed	dominant hand R/L/both		NCIT:C114182	Dominant Hand	skos:exactMatch	Data element, not the PATO quality 'handedness'.					
-src:V007	enrol_dt	date of baseline enrolment		NCIT:C222473	Study Subject Enrolled Date	skos:exactMatch						
-src:V008	consent_dt	date informed consent signed		NCIT:C93579	Informed Consent Date	skos:exactMatch						
-src:V009	FHx PD (1st deg)	any first degree relative with Parkinson's		NCIT:C17726	Family Medical History	skos:broadMatch	Family medical history in general is broader than a PD-specific first-degree history.	y				
-src:V010	PD dx	clinical diagnosis of idiopathic PD, 1=yes		MONDO:0005180	Parkinson disease	skos:exactMatch	'PD' read from the description, not peritoneal dialysis or panic disorder.					
-src:V011	MSA-P dx	MSA, parkinsonian variant		MONDO:0020352	multiple system atrophy, parkinsonian type	skos:exactMatch						
-src:V012	PSP_dx	progressive supranuclear palsy (clinical)		MONDO:0019037	progressive supranuclear palsy	skos:exactMatch						
-src:V013	DLB	dementia w/ Lewy bodies (consensus criteria)		MONDO:0007488	Lewy body dementia	skos:exactMatch						
-src:V014	age_sx_onset	age at first motor symptom	years	NCIT:C174273	Age Symptom Started	skos:broadMatch	'Age Symptom Started' covers any symptom; the variable is motor symptoms only.	y				
-src:V015	age_dx	age when PD diagnosed	years	NCIT:C156420	Age at Diagnosis	skos:exactMatch						
-src:V016	LRRK2 G2019S	LRRK2 p.G2019S carrier (genotyped)		MONDO:0011764	autosomal dominant Parkinson disease 8	skos:relatedMatch	Carrier status is not the disease, so related rather than exact.	y				
-src:V017	brady	bradykinesia present on exam		HP:0002067	Bradykinesia	skos:exactMatch						
-src:V018	RT	rest tremor (any limb)		HP:0002322	Resting tremor	skos:exactMatch						
-src:V019	rigid	rigidity on exam		HP:0002063	Rigidity	skos:exactMatch						
-src:V020	post instab	postural instability (pull test abnl)		HP:0002172	Postural instability	skos:exactMatch						
-src:V021	FOG	freezing episodes when walking		HP:0031825	Freezing of gait	skos:exactMatch						
-src:V022	hyposmia (subj)	reduced sense of smell, self report		HP:0004409	Hyposmia	skos:exactMatch						
-src:V023	anosmia	no sense of smell		HP:0000458	Anosmia	skos:exactMatch						
-src:V024	RBD	dream enactment / RBD, pt or partner reported		HP:5200291	REM sleep behavior disorder	skos:exactMatch	'RBD' read from the description, not receptor-binding domain.					
-src:V025	constip	<3 BMs/week or laxative use		HP:0002019	Constipation	skos:exactMatch						
-src:V026	OH	orthostatic hypotension (drop >=20/10)		HP:0001278	Orthostatic hypotension	skos:exactMatch						
-src:V027	urg	urinary urgency		HP:0000012	Urinary urgency	skos:exactMatch						
-src:V028	dep (clin dx)	depression, clinician judged		HP:0000716	Depression	skos:exactMatch	A symptom in this context, so HPO rather than a MONDO depressive disorder.					
-src:V029	VH	visual hallucinations last month		HP:0002367	Visual hallucination	skos:exactMatch						
-src:V030	MCI	PD-MCI (Level II criteria)		HP:0100543	Cognitive impairment	skos:broadMatch	Neither HPO nor MONDO has mild cognitive impairment; Cognitive impairment is broader.	y				
-src:V031	LID	levodopa-induced dyskinesia		HP:0100660	Dyskinesia	skos:broadMatch	Dyskinesia of any cause is broader.					
-src:V032	dysphag	difficulty swallowing		HP:0002015	Dysphagia	skos:exactMatch						
-src:V033	UPDRS1_TOT	MDS UPDRS part I total	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	No term for the Part I total; the MDS-UPDRS questionnaire is broader.					
-src:V034	UPDRS2_TOT	MDS UPDRS part II total	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	As V033.					
-src:V035	UPDRS3 tot OFF	MDS-UPDRS III motor exam total, practically defined OFF	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	As V033. LOINC 77720-1 is the original UPDRS motor panel, a different instrument.					
-src:V036	UPDRS3 tot ON	MDS-UPDRS III motor exam total, ON medication	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	As V035.					
-src:V037	UPDRS4_TOT	MDS UPDRS part IV total (motor complications)	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	As V033.					
-src:V038	HY stage	Hoehn & Yahr (0-5), rated in MDS-UPDRS III		NCIT:C100535	MDS-UPDRS - Hoehn and Yahr Stage	skos:exactMatch	Not LOINC 77714-4, the modified H&Y of the original UPDRS.					
-src:V039	MOCA_TOT	MoCA total /30	score	LOINC:72172-0	Total score [MoCA]	skos:exactMatch	NCIT C162720 is a close match.					
-src:V040	GDS15	geriatric depression scale short form total	score	LOINC:48545-8	Geriatric depression scale (GDS) short version total	skos:exactMatch	Short version; 48544-1 is the long form.					
-src:V041	ESS_total	Epworth sleepiness total 0-24	score	NCIT:C103517	Epworth Sleepiness Scale Questionnaire	skos:broadMatch	Questionnaire, broader than its total score; no LOINC code found.	y				
-src:V042	SCOPA-AUT tot	SCOPA-AUT total score	score	NCIT:C187513	Scales for Outcomes in Parkinson's Disease - Autonomic Dysfunction Questionnaire	skos:broadMatch	Questionnaire, broader than its total score.	y				
-src:V043	S&E ADL %	Schwab & England ADL, % independence	%	LOINC:77715-1	Schwab England activities of daily living scale [UPDRS]	skos:exactMatch	Same scale; LOINC files it under the UPDRS panel.	y				
-src:V044	UPSIT	smell ID test, 40 items, total correct	count	sssom:NoTermFound		skos:exactMatch	No UPSIT term found in NCIT or LOINC.	y				
-src:V045	RBDSQ	RBD screening questionnaire score	score	sssom:NoTermFound		skos:exactMatch	No RBDSQ term found in NCIT or LOINC.	y				
-src:V046	aSyn SAA (CSF)	alpha-syn seed amplification result pos/neg/indet		sssom:NoTermFound		skos:exactMatch	No term for alpha-synuclein seeding activity. Not LOINC 48498-0 (serum amyloid A).					
-src:V047	SAA_Fmax	max ThT fluorescence, SAA run	RFU	sssom:NoTermFound		skos:exactMatch	As V046.					
-src:V048	CSF a-syn total	total alpha-synuclein, ELISA	pg/ml	NCIT:C90119	Alpha-Synuclein	skos:relatedMatch	No LOINC test for CSF alpha-synuclein; related to the protein.	y				
-src:V049	ABETA42_CSF	amyloid beta 1-42 in CSF	pg/mL	LOINC:33203-1	Amyloid beta 42 peptide [Mass/volume] in Cerebrospinal Fluid	skos:exactMatch						
-src:V050	tTau CSF	total tau, CSF	pg/mL	LOINC:30160-6	Tau protein [Mass/volume] in Cerebrospinal Fluid	skos:exactMatch	101649-2 adds the method (immunoassay), which the variable does not state.					
-src:V051	pTau181 CSF	phospho-tau 181, CSF immunoassay	pg/mL	LOINC:72260-3	Phosphorylated tau 181 [Mass/volume] in Cerebrospinal Fluid by Immunoassay	skos:exactMatch						
-src:V052	sNfL	serum NfL, Simoa	pg/ml	LOINC:101281-4	Neurofilament light chain [Mass/volume] in Serum or Plasma by Immunoassay	skos:exactMatch	LOINC system is serum or plasma; mapped as exact by convention.	y				
-src:V053	pNfL_molar	plasma neurofilament light	pmol/L	LOINC:112614-3	Neurofilament light chain [Moles/volume] in Plasma by Immunoassay	skos:exactMatch	Molar unit, so the Moles/volume code, not 101281-4.					
-src:V054	NfL CSF	neurofilament light chain, CSF	ng/L	LOINC:100996-8	Neurofilament light chain [Mass/volume] in Cerebrospinal Fluid	skos:exactMatch	ng/L is a mass concentration (= pg/mL).					
-src:V055	GPNMB_SOMA	plasma GPNMB, SomaScan 7k	RFU	NCIT:C113116	Transmembrane Glycoprotein NMB	skos:relatedMatch	Relative units: no LOINC test; related to the protein.					
-src:V056	GPNMB olink	plasma GPNMB, Olink Explore	NPX	NCIT:C113116	Transmembrane Glycoprotein NMB	skos:relatedMatch	As V055.					
-src:V057	CTSB NPX	cathepsin B, Explore 3072	NPX	NCIT:C18267	Cathepsin B	skos:relatedMatch	As V055.					
-src:V058	hsCRP	high-sensitivity CRP, serum	mg/L	LOINC:30522-7	C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method	skos:exactMatch	Serum or plasma, mass; not 71426-1 (blood) or 76486-0 (molar).					
-src:V059	urate	serum uric acid	umol/L	LOINC:14933-6	Urate [Moles/volume] in Serum or Plasma	skos:exactMatch	Molar unit, so 14933-6, not 3084-1 (mass).					
-src:V060	HbA1c	glycated haemoglobin	%	LOINC:4548-4	Hemoglobin A1c/Hemoglobin.total in Blood	skos:exactMatch	Percent of total haemoglobin.					
-src:V061	CSF_RBC	red cells in CSF (blood contamination)	/uL	LOINC:26454-9	Erythrocytes [#/volume] in Cerebrospinal Fluid	skos:exactMatch						
-src:V062	fasting	fasted >8h before draw y/n		NCIT:C120460	Fasting Status	skos:exactMatch						
-src:V063	ft_cycles	no. freeze-thaw cycles before assay	count	sssom:NoTermFound		skos:exactMatch	No term found.	y				
-src:V064	DaT_SBR_putL	DaT-SPECT specific binding ratio, left putamen	ratio	sssom:NoTermFound		skos:exactMatch	No term for striatal binding ratio.	y				
-src:V065	DaT_SBR_caudR	DaT-SPECT specific binding ratio, right caudate	ratio	sssom:NoTermFound		skos:exactMatch	As V064.	y				
-src:V066	plate_id	assay plate / batch		sssom:NoTermFound		skos:exactMatch	Administrative; no term.					
-src:V067	LEDD	levodopa equivalent daily dose	mg/day	sssom:NoTermFound		skos:exactMatch	No LEDD term found in NCIT.	y				
-src:V068	med_state_exam	ON/OFF at time of motor exam		NCIT:C100499	MDS-UPDRS - Clinical State on Medication	skos:exactMatch						
+src:V001	SUBJ_NO	participant number (study)		NCIT:C83083	Subject Identifier	skos:exactMatch	Study-level subject identifier. Not C69256 (unique across studies).	y	ACCEPT			
+src:V002	site	recruiting centre		NCIT:C83081	Study Site Identifier	skos:exactMatch	Study site identifier.		ACCEPT			
+src:V003	Gender (M/F)	biological sex as recorded at screening		NCIT:C28421	Sex	skos:exactMatch	Values are biological sex, so Sex, not Gender (C17357). NCIT also has an undefined duplicate 'Sex' (C38389).	y	ACCEPT			
+src:V004	yob	year of birth		NCIT:C83164	Birth Year	skos:exactMatch			ACCEPT			
+src:V005	EDUC_YRS	years in formal education	years	NCIT:C122393	Number of Years of Education	skos:exactMatch			ACCEPT			
+src:V006	handed	dominant hand R/L/both		NCIT:C114182	Dominant Hand	skos:exactMatch	Data element, not the PATO quality 'handedness'.		ACCEPT			
+src:V007	enrol_dt	date of baseline enrolment		NCIT:C222473	Study Subject Enrolled Date	skos:exactMatch			ACCEPT			
+src:V008	consent_dt	date informed consent signed		NCIT:C93579	Informed Consent Date	skos:exactMatch			ACCEPT			
+src:V009	FHx PD (1st deg)	any first degree relative with Parkinson's		NCIT:C17726	Family Medical History	skos:broadMatch	Family medical history in general is broader than a PD-specific first-degree history.	y	ACCEPT			
+src:V010	PD dx	clinical diagnosis of idiopathic PD, 1=yes		MONDO:0005180	Parkinson disease	skos:exactMatch	'PD' read from the description, not peritoneal dialysis or panic disorder.		ACCEPT			
+src:V011	MSA-P dx	MSA, parkinsonian variant		MONDO:0020352	multiple system atrophy, parkinsonian type	skos:exactMatch			ACCEPT			
+src:V012	PSP_dx	progressive supranuclear palsy (clinical)		MONDO:0019037	progressive supranuclear palsy	skos:exactMatch			ACCEPT			
+src:V013	DLB	dementia w/ Lewy bodies (consensus criteria)		MONDO:0007488	Lewy body dementia	skos:exactMatch			ACCEPT			
+src:V014	age_sx_onset	age at first motor symptom	years	NCIT:C174273	Age Symptom Started	skos:broadMatch	'Age Symptom Started' covers any symptom; the variable is motor symptoms only.	y	ACCEPT			
+src:V015	age_dx	age when PD diagnosed	years	NCIT:C156420	Age at Diagnosis	skos:exactMatch			ACCEPT			
+src:V016	LRRK2 G2019S	LRRK2 p.G2019S carrier (genotyped)		MONDO:0011764	autosomal dominant Parkinson disease 8	skos:relatedMatch	Carrier status is not the disease, so related rather than exact.	y	ACCEPT			
+src:V017	brady	bradykinesia present on exam		HP:0002067	Bradykinesia	skos:exactMatch			ACCEPT			
+src:V018	RT	rest tremor (any limb)		HP:0002322	Resting tremor	skos:exactMatch			ACCEPT			
+src:V019	rigid	rigidity on exam		HP:0002063	Rigidity	skos:exactMatch			ACCEPT			
+src:V020	post instab	postural instability (pull test abnl)		HP:0002172	Postural instability	skos:exactMatch			ACCEPT			
+src:V021	FOG	freezing episodes when walking		HP:0031825	Freezing of gait	skos:exactMatch			ACCEPT			
+src:V022	hyposmia (subj)	reduced sense of smell, self report		HP:0004409	Hyposmia	skos:exactMatch			ACCEPT			
+src:V023	anosmia	no sense of smell		HP:0000458	Anosmia	skos:exactMatch			ACCEPT			
+src:V024	RBD	dream enactment / RBD, pt or partner reported		HP:5200291	REM sleep behavior disorder	skos:exactMatch	'RBD' read from the description, not receptor-binding domain.		ACCEPT			
+src:V025	constip	<3 BMs/week or laxative use		HP:0002019	Constipation	skos:exactMatch			ACCEPT			
+src:V026	OH	orthostatic hypotension (drop >=20/10)		HP:0001278	Orthostatic hypotension	skos:exactMatch			ACCEPT			
+src:V027	urg	urinary urgency		HP:0000012	Urinary urgency	skos:exactMatch			ACCEPT			
+src:V028	dep (clin dx)	depression, clinician judged		HP:0000716	Depression	skos:exactMatch	A symptom in this context, so HPO rather than a MONDO depressive disorder.		ACCEPT			
+src:V029	VH	visual hallucinations last month		HP:0002367	Visual hallucination	skos:exactMatch			ACCEPT			
+src:V030	MCI	PD-MCI (Level II criteria)		HP:0100543	Cognitive impairment	skos:broadMatch	Neither HPO nor MONDO has mild cognitive impairment; Cognitive impairment is broader.	y	CHANGE	NCIT:C215366		NCIT has Mild Cognitive Impairment, closer than HPO Cognitive impairment; PD-MCI is a kind of MCI, so broad.
+src:V031	LID	levodopa-induced dyskinesia		HP:0100660	Dyskinesia	skos:broadMatch	Dyskinesia of any cause is broader.		ACCEPT			
+src:V032	dysphag	difficulty swallowing		HP:0002015	Dysphagia	skos:exactMatch			ACCEPT			
+src:V033	UPDRS1_TOT	MDS UPDRS part I total	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	No term for the Part I total; the MDS-UPDRS questionnaire is broader.		ACCEPT			
+src:V034	UPDRS2_TOT	MDS UPDRS part II total	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	As V033.		ACCEPT			
+src:V035	UPDRS3 tot OFF	MDS-UPDRS III motor exam total, practically defined OFF	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	As V033. LOINC 77720-1 is the original UPDRS motor panel, a different instrument.		ACCEPT			
+src:V036	UPDRS3 tot ON	MDS-UPDRS III motor exam total, ON medication	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	As V035.		ACCEPT			
+src:V037	UPDRS4_TOT	MDS UPDRS part IV total (motor complications)	score	NCIT:C100769	Movement Disorder Society Unified Parkinson's Disease Rating Scale Questionnaire	skos:broadMatch	As V033.		ACCEPT			
+src:V038	HY stage	Hoehn & Yahr (0-5), rated in MDS-UPDRS III		NCIT:C100535	MDS-UPDRS - Hoehn and Yahr Stage	skos:exactMatch	Not LOINC 77714-4, the modified H&Y of the original UPDRS.		ACCEPT			
+src:V039	MOCA_TOT	MoCA total /30	score	LOINC:72172-0	Total score [MoCA]	skos:exactMatch	NCIT C162720 is a close match.		ACCEPT			
+src:V040	GDS15	geriatric depression scale short form total	score	LOINC:48545-8	Geriatric depression scale (GDS) short version total	skos:exactMatch	Short version; 48544-1 is the long form.		ACCEPT			
+src:V041	ESS_total	Epworth sleepiness total 0-24	score	NCIT:C103517	Epworth Sleepiness Scale Questionnaire	skos:broadMatch	Questionnaire, broader than its total score; no LOINC code found.	y	ACCEPT			
+src:V042	SCOPA-AUT tot	SCOPA-AUT total score	score	NCIT:C187513	Scales for Outcomes in Parkinson's Disease - Autonomic Dysfunction Questionnaire	skos:broadMatch	Questionnaire, broader than its total score.	y	ACCEPT			
+src:V043	S&E ADL %	Schwab & England ADL, % independence	%	LOINC:77715-1	Schwab England activities of daily living scale [UPDRS]	skos:exactMatch	Same scale; LOINC files it under the UPDRS panel.	y	ACCEPT			
+src:V044	UPSIT	smell ID test, 40 items, total correct	count	sssom:NoTermFound		skos:exactMatch	No UPSIT term found in NCIT or LOINC.	y	ACCEPT			
+src:V045	RBDSQ	RBD screening questionnaire score	score	sssom:NoTermFound		skos:exactMatch	No RBDSQ term found in NCIT or LOINC.	y	CHANGE	NCIT:C187517	skos:broadMatch	NCIT has the RBDSQ questionnaire; broad, as for the Epworth and SCOPA-AUT totals.
+src:V046	aSyn SAA (CSF)	alpha-syn seed amplification result pos/neg/indet		sssom:NoTermFound		skos:exactMatch	No term for alpha-synuclein seeding activity. Not LOINC 48498-0 (serum amyloid A).		ACCEPT			
+src:V047	SAA_Fmax	max ThT fluorescence, SAA run	RFU	sssom:NoTermFound		skos:exactMatch	As V046.		ACCEPT			
+src:V048	CSF a-syn total	total alpha-synuclein, ELISA	pg/ml	NCIT:C90119	Alpha-Synuclein	skos:relatedMatch	No LOINC test for CSF alpha-synuclein; related to the protein.	y	ACCEPT			
+src:V049	ABETA42_CSF	amyloid beta 1-42 in CSF	pg/mL	LOINC:33203-1	Amyloid beta 42 peptide [Mass/volume] in Cerebrospinal Fluid	skos:exactMatch			ACCEPT			
+src:V050	tTau CSF	total tau, CSF	pg/mL	LOINC:30160-6	Tau protein [Mass/volume] in Cerebrospinal Fluid	skos:exactMatch	101649-2 adds the method (immunoassay), which the variable does not state.		ACCEPT			
+src:V051	pTau181 CSF	phospho-tau 181, CSF immunoassay	pg/mL	LOINC:72260-3	Phosphorylated tau 181 [Mass/volume] in Cerebrospinal Fluid by Immunoassay	skos:exactMatch			ACCEPT			
+src:V052	sNfL	serum NfL, Simoa	pg/ml	LOINC:101281-4	Neurofilament light chain [Mass/volume] in Serum or Plasma by Immunoassay	skos:exactMatch	LOINC system is serum or plasma; mapped as exact by convention.	y	ACCEPT			
+src:V053	pNfL_molar	plasma neurofilament light	pmol/L	LOINC:112614-3	Neurofilament light chain [Moles/volume] in Plasma by Immunoassay	skos:exactMatch	Molar unit, so the Moles/volume code, not 101281-4.		ACCEPT			
+src:V054	NfL CSF	neurofilament light chain, CSF	ng/L	LOINC:100996-8	Neurofilament light chain [Mass/volume] in Cerebrospinal Fluid	skos:exactMatch	ng/L is a mass concentration (= pg/mL).		ACCEPT			
+src:V055	GPNMB_SOMA	plasma GPNMB, SomaScan 7k	RFU	NCIT:C113116	Transmembrane Glycoprotein NMB	skos:relatedMatch	Relative units: no LOINC test; related to the protein.		ACCEPT			
+src:V056	GPNMB olink	plasma GPNMB, Olink Explore	NPX	NCIT:C113116	Transmembrane Glycoprotein NMB	skos:relatedMatch	As V055.		ACCEPT			
+src:V057	CTSB NPX	cathepsin B, Explore 3072	NPX	NCIT:C18267	Cathepsin B	skos:relatedMatch	As V055.		ACCEPT			
+src:V058	hsCRP	high-sensitivity CRP, serum	mg/L	LOINC:30522-7	C reactive protein [Mass/volume] in Serum or Plasma by High sensitivity method	skos:exactMatch	Serum or plasma, mass; not 71426-1 (blood) or 76486-0 (molar).		ACCEPT			
+src:V059	urate	serum uric acid	umol/L	LOINC:14933-6	Urate [Moles/volume] in Serum or Plasma	skos:exactMatch	Molar unit, so 14933-6, not 3084-1 (mass).		ACCEPT			
+src:V060	HbA1c	glycated haemoglobin	%	LOINC:4548-4	Hemoglobin A1c/Hemoglobin.total in Blood	skos:exactMatch	Percent of total haemoglobin.		ACCEPT			
+src:V061	CSF_RBC	red cells in CSF (blood contamination)	/uL	LOINC:26454-9	Erythrocytes [#/volume] in Cerebrospinal Fluid	skos:exactMatch			ACCEPT			
+src:V062	fasting	fasted >8h before draw y/n		NCIT:C120460	Fasting Status	skos:exactMatch			ACCEPT			
+src:V063	ft_cycles	no. freeze-thaw cycles before assay	count	sssom:NoTermFound		skos:exactMatch	No term found.	y	ACCEPT			
+src:V064	DaT_SBR_putL	DaT-SPECT specific binding ratio, left putamen	ratio	sssom:NoTermFound		skos:exactMatch	No term for striatal binding ratio.	y	ACCEPT			
+src:V065	DaT_SBR_caudR	DaT-SPECT specific binding ratio, right caudate	ratio	sssom:NoTermFound		skos:exactMatch	As V064.	y	ACCEPT			
+src:V066	plate_id	assay plate / batch		sssom:NoTermFound		skos:exactMatch	Administrative; no term.		ACCEPT			
+src:V067	LEDD	levodopa equivalent daily dose	mg/day	sssom:NoTermFound		skos:exactMatch	No LEDD term found in NCIT.	y	ACCEPT			
+src:V068	med_state_exam	ON/OFF at time of motor exam		NCIT:C100499	MDS-UPDRS - Clinical State on Medication	skos:exactMatch			ACCEPT			

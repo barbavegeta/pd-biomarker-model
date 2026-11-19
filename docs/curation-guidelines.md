@@ -45,8 +45,8 @@ Only current terms are used; obsolete terms are replaced by their successor.
 - `skos:exactMatch`: the term means the same as the variable, including
   specimen, property and instrument version.
 - `skos:broadMatch`: the term is more general than the variable (a
-  questionnaire for one of its total scores; *Cognitive impairment* for
-  PD mild cognitive impairment).
+  questionnaire for one of its total scores; *Mild cognitive impairment*
+  for PD mild cognitive impairment).
 - `skos:narrowMatch`: the term is more specific than the variable.
 - `skos:relatedMatch`: associated but neither equivalent nor hierarchical
   (a measurement and its analyte; a carrier status and the genetic disease).
