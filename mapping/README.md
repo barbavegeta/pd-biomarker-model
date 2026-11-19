@@ -46,7 +46,8 @@ Commands run from the repository root with `uv run python`.
 6. **Review**: `scripts/mapping_workflow.py review-sheet v1` writes
    `runs/v1/review.tsv`, with proposals identical to the gold standard
    already accepted. For a later run, `--previous v1` also accepts
-   proposals identical to the mappings that held after the v1 review. Fill in `decision` for the rest, then run
+   proposals identical to the mappings that held after the v1 review.
+   Fill in `decision` for the rest, then run
    `scripts/mapping_workflow.py apply-review v1 --orcid <ORCID iD> --name "<name>"`.
 7. **Score**: `scripts/mapping_workflow.py score v1`.
 
