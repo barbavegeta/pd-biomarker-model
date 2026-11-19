@@ -205,17 +205,28 @@ REVIEW_COLUMNS = [
 ]
 
 
-def review_sheet(proposals: list[dict], dictionary: list[dict], gold: dict[str, dict] | None) -> list[dict]:
-    """A sheet for reviewing agent proposals. Where a gold standard is given, a
-    proposal identical to it (term and predicate) is pre-filled ACCEPT."""
+def review_sheet(proposals: list[dict], dictionary: list[dict], gold: dict[str, dict] | None,
+                 previous: dict[str, dict] | None = None) -> list[dict]:
+    """A sheet for reviewing agent proposals.
+
+    A proposal identical (term and predicate) to the gold standard, or to the
+    mapping that held after the reviewer's review of an earlier run
+    (`previous`), is pre-filled ACCEPT; the rest are left for the reviewer.
+    """
     info = {row["variable_id"]: row for row in dictionary}
     sheet = []
     for row in proposals:
         variable = info[row["subject_id"]]
-        same = None
+        same, note = None, ""
+        key = (row["object_id"], row["predicate_id"])
         if gold is not None:
             g = gold[row["subject_id"]]
-            same = (row["object_id"], row["predicate_id"]) == (g["object_id"], g["predicate_id"])
+            same = key == (g["object_id"], g["predicate_id"])
+            note = "Same as the gold standard." if same else ""
+        if not same and previous is not None and row["subject_id"] in previous:
+            held = previous[row["subject_id"]]
+            if key == (held["object_id"], held["predicate_id"]):
+                note = "Same as the mapping accepted in the review of the previous run."
         sheet.append(dict.fromkeys(REVIEW_COLUMNS, "") | {
             "subject_id": row["subject_id"], "variable_name": variable["variable_name"],
             "description": variable["description"], "unit": variable["unit"],
@@ -223,8 +234,8 @@ def review_sheet(proposals: list[dict], dictionary: list[dict], gold: dict[str, 
             "predicate_id": row["predicate_id"], "confidence": row["confidence"],
             "agent_comment": row["comment"],
             "matches_gold_standard": "" if same is None else ("yes" if same else "no"),
-            "decision": "ACCEPT" if same else "",
-            "reviewer_note": "Same as the gold standard." if same else "",
+            "decision": "ACCEPT" if note else "",
+            "reviewer_note": note,
         })
     return sheet
 

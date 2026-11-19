@@ -123,6 +123,13 @@ def test_review_sheet_prefills_gold_matches_and_review_is_recorded(gold, proposa
     assert len(reviewed) == 6
 
 
+def test_review_sheet_prefills_mappings_accepted_in_an_earlier_review(gold, proposals):
+    previous = {"src:V003": dict(proposals[2], object_id="NCIT:C25364", predicate_id="skos:exactMatch")}
+    sheet = mapping.review_sheet(proposals, DICTIONARY, mapping.accepted(gold), previous)
+    assert [r["decision"] for r in sheet] == ["ACCEPT", "", "ACCEPT", "ACCEPT"]
+    assert sheet[2]["reviewer_note"].startswith("Same as the mapping accepted")
+
+
 def test_corrected_terms_get_their_label_looked_up():
     review = [dict(GOLD_REVIEW[0], decision="CHANGE", corrected_object_id="HP:0001337")] + GOLD_REVIEW[1:]
     rows = mapping.freeze_gold_standard(review, DRAFT, REVIEWER, "2026-11-20", DICTIONARY,

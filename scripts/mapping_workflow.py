@@ -3,6 +3,7 @@
     uv run python scripts/mapping_workflow.py freeze-gold --orcid 0000-0000-0000-0000 --name "Your Name"
     uv run python scripts/mapping_workflow.py import-proposals v1 --tool-version 2.1.328 --model claude-opus-5-5
     uv run python scripts/mapping_workflow.py review-sheet v1
+    uv run python scripts/mapping_workflow.py review-sheet v2 --previous v1
     uv run python scripts/mapping_workflow.py apply-review v1 --orcid 0000-0000-0000-0000 --name "Your Name"
     uv run python scripts/mapping_workflow.py score v1
     uv run python scripts/mapping_workflow.py validate mapping/gold_standard.sssom.tsv
@@ -66,8 +67,10 @@ def main() -> int:
     p.add_argument("--tool-version", required=True, help="Claude Code version that ran the agent")
     p.add_argument("--model", required=True)
     p.add_argument("--date", default=date.today().isoformat())
-    for name in ("review-sheet", "score"):
-        sub.add_parser(name).add_argument("run")
+    p = sub.add_parser("review-sheet")
+    p.add_argument("run")
+    p.add_argument("--previous", help="an earlier run whose reviewed mappings also count as accepted")
+    sub.add_parser("score").add_argument("run")
     sub.add_parser("validate").add_argument("files", nargs="+", type=Path)
     args = parser.parse_args()
 
@@ -100,7 +103,10 @@ def main() -> int:
         validate(run / "proposals.sssom.tsv")
     elif args.command == "review-sheet":
         gold = mapping.accepted(mapping.read_tsv(GOLD)) if GOLD.exists() else None
-        sheet = mapping.review_sheet(mapping.read_tsv(run / "proposals.sssom.tsv"), mapping.read_tsv(DICTIONARY), gold)
+        previous = (mapping.accepted(mapping.read_tsv(MAPPING / "runs" / args.previous / "reviewed.sssom.tsv"))
+                    if args.previous else None)
+        sheet = mapping.review_sheet(mapping.read_tsv(run / "proposals.sssom.tsv"), mapping.read_tsv(DICTIONARY),
+                                     gold, previous)
         mapping.write_tsv(run / "review.tsv", mapping.REVIEW_COLUMNS, sheet)
         todo = sum(not row["decision"] for row in sheet)
         print(f"{(run / 'review.tsv').relative_to(ROOT)}: {len(sheet)} proposals, {todo} to review")
