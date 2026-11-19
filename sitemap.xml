@@ -2,466 +2,478 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://barbavegeta.github.io/pd-biomarker-model/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
          <loc>https://barbavegeta.github.io/pd-biomarker-model/about/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <lastmod>2026-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/changelog/</loc>
+         <lastmod>2026-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/curation-guidelines/</loc>
+         <lastmod>2026-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/diagram/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
          <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Analyte/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/Analyte/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Assay/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/Assay/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/AssayTechnologyEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/BiomarkerMeasurement/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/BiomarkerMeasurement/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/ClinicalAssessment/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Boolean/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/Diagnosis/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/BrainRegionEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/NamedThing/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/CategoricalResultEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/ParkinsonsClinicalAssessment/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/ClinicalAssessment/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/ParkinsonsDiagnosis/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/CohortEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/ParkinsonsStudyDataset/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/CuratorTypeEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/Participant/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Curie/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/PhenotypeObservation/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Date/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/ProvenanceMixin/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/DateOrDatetime/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/Specimen/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Datetime/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/StudyDataset/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Decimal/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/classes/Visit/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Diagnosis/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/AssayTechnologyEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/DiagnosticCertaintyEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/BrainRegionEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/DiagnosticCriteriaEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/CategoricalResultEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/DiseaseEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/CohortEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Double/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/CuratorTypeEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Float/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/DiagnosticCertaintyEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Integer/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/DiagnosticCriteriaEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Jsonpath/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/DiseaseEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Jsonpointer/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/LateralityEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/LateralityEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/MeasurementTypeEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/MeasurementTypeEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/MedicationStateEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/MedicationStateEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/ModalityEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/ModalityEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/ParkinsonianDisorderEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/NamedThing/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/ParkinsonsInstrumentEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Ncname/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/PhenotypeEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Nodeidentifier/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/PlatformEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Objectidentifier/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/SexEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/ParkinsonianDisorderEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/SpecimenTypeEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/ParkinsonsClinicalAssessment/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enums/UnitEnum/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/ParkinsonsDiagnosis/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/schemas/pd_biomarker_model/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/ParkinsonsInstrumentEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/age_at_diagnosis/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/ParkinsonsStudyDataset/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/age_at_symptom_onset/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Participant/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/analyte/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/PhenotypeEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/analytes/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/PhenotypeObservation/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/assay/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/PlatformEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/assays/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/ProvenanceMixin/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/below_lloq/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/SexEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/biomarker_measurements/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Sparqlpath/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/brain_region/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Specimen/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/categorical_result/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/SpecimenTypeEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/clinical_assessments/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/String/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/cohort/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/StudyDataset/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/condition/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Time/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/conforms_to/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/UnitEnum/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/created_on/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Uri/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/curation_date/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Uriorcurie/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/curator/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/Visit/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/curator_type/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/age_at_diagnosis/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/dataset_version/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/age_at_symptom_onset/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/description/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/analyte/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/diagnoses/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/analytes/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/diagnostic_certainty/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/assay/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/diagnostic_criteria/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/assays/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/enrolment_date/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/below_lloq/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/excluded/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/biomarker_measurements/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/freeze_thaw_cycles/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/brain_region/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/gene_symbol/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/categorical_result/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/hgnc_id/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/clinical_assessments/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/id/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/cohort/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/instrument/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/condition/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/is_synthetic/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/conforms_to/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/label/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/created_on/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/laterality/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/curation_date/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/license/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/curator/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/loinc_code/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/curator_type/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/measurement_type/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/dataset_version/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/medication_state/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/description/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/modality/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/diagnoses/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/participant/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/diagnostic_certainty/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/participants/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/diagnostic_criteria/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/phenotype/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/enrolment_date/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/phenotype_observations/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/excluded/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/platform/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/freeze_thaw_cycles/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/platform_probe_id/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/gene_symbol/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/score/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/hgnc_id/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/sex/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/id/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/source/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/instrument/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/specimen/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/is_synthetic/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/specimen_type/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/label/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/specimens/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/laterality/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/technology/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/license/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/title/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/loinc_code/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/unit/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/measurement_type/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/value/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/medication_state/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/visit/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/modality/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/visit_code/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/participant/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/visit_date/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/participants/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/visits/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/pd_biomarker_model/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/slots/year_of_birth/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/phenotype/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Boolean/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/phenotype_observations/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Curie/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/platform/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Date/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/platform_probe_id/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/DateOrDatetime/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/score/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Datetime/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/sex/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Decimal/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/source/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Double/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/specimen/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Float/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/specimen_type/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Integer/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/specimens/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Jsonpath/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/technology/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Jsonpointer/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/title/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Ncname/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/unit/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Nodeidentifier/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/value/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Objectidentifier/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/visit/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Sparqlpath/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/visit_code/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/String/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/visit_date/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Time/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/visits/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Uri/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/year_of_birth/</loc>
-         <lastmod>2026-11-18</lastmod>
+         <loc>https://barbavegeta.github.io/pd-biomarker-model/elements/types/Uriorcurie/</loc>
+         <lastmod>2026-11-19</lastmod>
     </url>
 </urlset>

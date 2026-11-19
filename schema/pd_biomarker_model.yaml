@@ -6,7 +6,7 @@ title: Parkinson's disease biomarker model
 see_also:
 - https://barbavegeta.github.io/pd-biomarker-model
 id: https://w3id.org/pd-biomarker-model
-version: 0.1.0
+version: 0.2.0
 imports:
 - linkml:types
 - core
@@ -1747,11 +1747,13 @@ classes:
     name: StudyDataset
     definition_uri: https://w3id.org/pd-biomarker-model/StudyDataset
     description: A versioned collection of cohort records with dataset-level metadata.
-      Records refer to each other by identifier.
+      Records refer to each other by identifier. Disease modules subclass this and
+      narrow the ranges of its record lists.
     from_schema: https://w3id.org/pd-biomarker-model/core
     exact_mappings:
     - schema:Dataset
     is_a: NamedThing
+    abstract: true
     slots:
     - id
     - title
@@ -1801,9 +1803,11 @@ classes:
   Diagnosis:
     name: Diagnosis
     definition_uri: https://w3id.org/pd-biomarker-model/Diagnosis
-    description: A clinical diagnosis recorded for a participant.
+    description: A clinical diagnosis recorded for a participant. Disease modules
+      subclass this and bind the condition to their own value set.
     from_schema: https://w3id.org/pd-biomarker-model/core
     is_a: NamedThing
+    abstract: true
     slots:
     - id
     - participant
@@ -2042,6 +2046,7 @@ classes:
     description: Who curated a record, when, from which source, and whether the curator
       was a person or an AI agent.
     from_schema: https://w3id.org/pd-biomarker-model/core
+    abstract: true
     mixin: true
     slots:
     - source
@@ -2051,6 +2056,6 @@ classes:
     class_uri: pdbm:ProvenanceMixin
 metamodel_version: 1.12.0
 source_file: pd_biomarker_model.yaml
-source_file_date: '2026-11-18T22:23:18'
+source_file_date: '2026-11-19T10:25:32'
 source_file_size: 8901
 
