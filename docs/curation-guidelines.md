@@ -8,15 +8,14 @@ proposal.
 ## What is mapped
 
 Each source variable is mapped once, to the concept the variable records.
-A yes/no variable for "rest tremor" records the phenotype *Resting tremor*;
-a variable holding a serum NfL concentration records the laboratory test
-for NfL mass concentration in serum or plasma.
+A yes/no variable for "masked face" records the phenotype *Hypomimic face*;
+a variable holding a plasma GFAP concentration records the laboratory test
+for GFAP mass concentration in plasma.
 
 Read the name, the description and the unit together. Abbreviations are
-resolved from the description and unit, never from the name alone (*SAA*
-is a seed amplification assay here, not serum amyloid A; *PD* is Parkinson's
-disease, not peritoneal dialysis; *RBD* is REM sleep behaviour disorder, not
-a receptor-binding domain).
+resolved from the description and unit, never from the name alone (*MS*
+may be multiple sclerosis or mass spectrometry; *PE* may be pulmonary
+embolism or a physical examination).
 
 ## Target vocabularies
 
@@ -45,8 +44,8 @@ Only current terms are used; obsolete terms are replaced by their successor.
 - `skos:exactMatch`: the term means the same as the variable, including
   specimen, property and instrument version.
 - `skos:broadMatch`: the term is more general than the variable (a
-  questionnaire for one of its total scores; *Mild cognitive impairment*
-  for PD mild cognitive impairment).
+  questionnaire for one of its total scores; *Tremor* for a variable that
+  records only jaw tremor).
 - `skos:narrowMatch`: the term is more specific than the variable.
 - `skos:relatedMatch`: associated but neither equivalent nor hierarchical
   (a measurement and its analyte; a carrier status and the genetic disease).
