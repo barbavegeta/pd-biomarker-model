@@ -1,0 +1,22 @@
+{
+  "variables": 68,
+  "gold_mapped": 60,
+  "gold_no_term": 8,
+  "agent_proposed": 64,
+  "correct_terms": 57,
+  "precision": 0.891,
+  "recall": 0.95,
+  "f1": 0.92,
+  "predicate_agreement": 0.982,
+  "no_term_agreement": 0.5,
+  "fully_correct": 0.882,
+  "mean_confidence_correct": 0.805,
+  "mean_confidence_wrong": 0.531,
+  "errors_by_type": {
+    "spurious": 4,
+    "too narrow": 1,
+    "wrong ontology": 1,
+    "wrong predicate": 1,
+    "wrong term": 1
+  }
+}
