@@ -58,9 +58,13 @@ no term is better than proposing a wrong one.
 
 Every mapping records who made it (`author_id`: an ORCID for a person, a
 versioned agent identifier for an AI agent), how (`mapping_justification`:
-`semapv:ManualMappingCuration` for a person, `semapv:LexicalMatching` or
-`semapv:SemanticSimilarityThresholdMatching` for the agent), when
+`semapv:ManualMappingCuration` for a person; `semapv:CompositeMatching` for
+the agent, which combines lexical search with its own judgement), when
 (`mapping_date`) and, for agent proposals, with what (`mapping_tool`,
-`confidence`). The `curator_type` column records whether the author was a
-person or an AI agent. A reviewer's decision adds `reviewer_id` and a
-comment; corrected proposals keep the agent's original term in the comment.
+`mapping_tool_version`, `confidence`). The `curator_type` column records
+whether the author was a person or an AI agent.
+
+A review never overwrites a proposal. The reviewer adds `reviewer_id` and
+`reviewer_agreement` to it: 1.0 to accept, -1.0 to reject. A correction is a
+rejection plus a new mapping authored by the reviewer, so the original
+proposal stays in the file.
